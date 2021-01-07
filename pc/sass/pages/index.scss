@@ -1,0 +1,156 @@
+@charset 'utf-8';
+//메인 왼쪽 오른쪽 영역 사이즈
+$leftWidth:740px;
+$mainGap:10px;
+$rightWidth:330px;
+
+.main-widget-wrap { padding:20px 0; }
+.main-widget-inner { display:table;
+	.main-left-area { float:left; width:$leftWidth; }
+	.main-right-area { float:right; width:$rightWidth; }
+}
+
+// 메인 배너 슬라이드
+.main-slide-banner { overflow:hidden; position:relative; width:$leftWidth; height:130px; border:1px solid $borderColor-1; @include boxSizing;
+	.bx-pager { position:absolute; right:10px; bottom:10px; z-index:1; height:10px; }
+	.bx-pager-item { display:inline-block; *display:inline; margin:0 0 0 5px;
+		a { display:block; width:10px; height:10px; text-indent:-9999px; background:url($i-circle) no-repeat left top;
+			&.active { background-image:url($i-circle-on); }
+		}
+	}
+}
+
+//이달의 추천보험
+.main-special-widget { overflow:hidden; position:relative; margin:10px 0 0 0; width:$leftWidth; border:1px solid $borderColor-1; background-color:#fff; @include boxSizing;
+	.main-widget-title { padding:0 20px; border-bottom:1px solid $borderColor-1;
+		h3 { line-height:47px; font-size:20px;}
+	}
+	.main-special-list { padding:40px 18px;
+		.special-list-slider {
+			li { float:left; border-right:1px solid $borderColor-1;
+				.list-box { width:208px;
+					.list-subject { position:relative; height:17px;
+						.list-logo { position:absolute; top:0; right:0; }
+					}
+					.list-img { overflow:hidden; margin:13px 0 0 0;}
+					.list-btn { display:table; margin:10px 0 0 0;
+						a { float:left; margin:0 0 0 6px; font-weight:bold; @include btnStyle(100px, 30px, $fColor-2, #fff); @include boxSizing;
+							&:first-child { margin:0; }
+							&:hover { color:$baseColor; border-color:$baseColor; }
+						}
+					}
+				}
+			}
+		}
+		// slider Controller
+		.bx-controls-direction { position:absolute; right:0; top:0; width:100px;
+			a { float:left; display:block; width:50px; height:47px; text-indent:-9999px; background-position:center center; background-color:#fff; background-repeat:no-repeat; border-left:1px solid $borderColor-1; @include boxSizing;
+				&.bx-prev { background-image:url($i-m-prev-arrow); }
+				&.bx-next { background-image:url($i-m-next-arrow); }
+				&.bx-prev:hover { background-image:url($i-m-prev-arrow-on); }
+				&.bx-next:hover { background-image:url($i-m-next-arrow-on); }
+			}
+		}
+	}
+}
+
+//메인 서비스 텍스트 박스
+.main-service-widget { overflow:hidden; margin:10px 0 0 0; padding:13px 19px; width:100%; height:60px; border:1px solid $borderColor-1; background-color:#fff; @include boxSizing;
+	.main-widget-title { float:left; width:129px; color:$baseColor2; line-height:32px; }
+	.service-desc { float:left; width:550px; margin:0 0 0 20px; line-height:32px; width:550px;
+		.service-text { float:left; color:$fColor-2; }
+		.service-btn { float:right;
+			.service-cal-btn { display:block; @include btnStyle(120px, 30px, $fColor-2, $fColor-2); color:#fff; @include boxSizing;
+				&:hover { background-color:#474747; border-color:#474747; }
+			}
+		}
+	}
+}
+
+//메인 굿팁
+.main-tip-widget { overflow:hidden; display:table; margin:10px 0 0 0; padding:13px 19px; width:100%; height:240px; border:1px solid $borderColor-1; background-color:#fff; @include boxSizing;
+	.main-tip-title { float:left; width:160px; height:100%; margin:0 20px 0 0; padding:20px; background:url('../image/main/main_tip_title_bg.jpg') no-repeat left top; @include boxSizing;
+		h3 {
+			p { font-size:20px; color:$fColor-1; }
+		}
+		.title-desc { margin:10px 0 0 0; }
+		.tip-more-btn { float:left; margin:35px 0 0 0;
+			a { display:block; width:66px; height:22px; line-height:22px; text-align:center; border:1px solid #222; border-radius:11px;
+				&:hover { background-color:#222; color:#fff; }
+			}
+		}
+	}
+	.main-tip-list { float:left; width:540px; margin:0 0 0 -20px;
+		ul { overflow:hidden; width:540px;
+			li { padding:0 0 0 20px;
+				.list-box { width:160px;
+					.list-img { overflow:hidden; width:160px; height:110px;
+						img { display:block; width:100%; }
+					}
+					.list-desc { margin:15px 0 0 0;
+						.list-subject {
+							a { display:block; line-height:20px;
+								&:hover { text-decoration:underline; color:$baseColor2; }
+							}
+						}
+						.list-label { margin:10px 0 0 0; color:$fColor-3; }
+					}
+				}
+			}
+		}
+	}
+}
+
+//오른쪽 영역
+//메인 폼 박스
+.main-form-widget { height:510px; padding:35px 20px; background-color:#fff; border:1px solid $borderColor-1; @include boxSizing;
+	h3 { text-align:center; font-size:20px; }
+	.main-form-box { margin:30px 0 0 0;
+		.line-box { margin:15px 0 0 0; width:100%;
+			&:first-child { margin:0; }
+		}
+	}
+	.form-agree-box { overflow:hidden; padding:13px 0 0 0;
+		.agree-view {
+			float: right;
+			a {
+				display:block;
+				color: $baseColor;
+				line-height: 20px;
+				border-bottom:1px solid $baseColor;
+			}
+		}
+	}
+	.form-btn-box { margin:20px 0 0 0;
+		button { display:block; font-size:20px; @include btnStyle(100%, 50px, #fff, $baseColor2); border-radius:5px;
+			&:hover { background-color:#3487d4; }
+		}
+	}
+	.form-cs-box { margin:30px 0 0 0;
+		.cs-p { text-align:center; line-height:22px;
+			strong { font-size:20px; }
+		}
+	}
+}
+
+//메인 QA 게시판
+.main-qa-widget { height:240px; margin:10px 0 0 0; padding:20px; border:1px solid $borderColor-1; background-color:#fff; @include boxSizing;
+	.main-widget-title { display:table; width:100%; padding:0 0 15px; border-bottom:1px solid $borderColor-1;
+		h3 { float:left; font-size:$fSize-m; }
+		.more-btn { float:right;
+			a { display:block; width:20px; height:20px; line-height:18px; font-size:20px; color:$fColor-2; text-align:center; border:1px solid $borderColor-3; @include boxSizing;
+				&:hover { color:$fColor-1; border-color:$borderColor-4; }
+			}
+		}
+	}
+	.qa-list-box { margin:20px 0 0 0;
+		li { margin:14px 0 0 0;
+			&:first-child { margin:0; }
+			a { overflow:hidden; display:block; }
+			.number { float:left; display:inline; margin:0 5px 0 0; width:16px; height:16px; text-align:center; font-weight:bold; color:#fff; line-height:18px; background-color:#999; border-radius:2px; @include transition(0.2s); }
+			.text { float:left; width:265px; @include textOverflow; color:#2d363d; @include transition(0.2s);
+			}
+			&:hover .text { color:$baseColor2; text-decoration:underline; }
+		}
+	}
+}

@@ -1,0 +1,117 @@
+@charset 'utf-8';
+
+.smart-product-page { padding:0 0 40px;
+	.sub-visual-widget { overflow:hidden; padding:40px 0 50px; background-color:#fff; border-bottom:1px solid $borderColor-1;
+		.sub-visual-inner { display:table; }
+	}
+	.visual-title-wrap { padding:0 0 45px; text-align:center;
+		.smart-pr-number { text-align:right; font-size:$fSize-s; color:$fColor-3; }
+		.smart-pr-logo { margin:5px 0 20px 0;
+			img { margin:0 auto; }
+		}
+		h2 { font-size:$fSize-b; }
+		.sub-title-desc { margin:25px 0 0; font-size:$fSize-r; color:$fColor-1; }
+		.smart-pr-section { margin:35px 0 0 0;
+			img { margin:0 auto; }
+		}
+	}
+
+	//서브컨텐츠
+	.sub-contents-wrap {
+		.user-form-widget { margin:30px 0 0 0;
+			h3 { margin:0 0 15px; font-size:$fSize-r; }
+
+			.form-chart { background-color:#fff; border:1px solid $borderColor-1; @include boxSizing; }
+			//첫번째 폼
+			.form-chart-1 { display:table; width:100%; padding:30px 0;
+				.form-img-box { float:left; padding:70px 0 0; width:272px; text-align:center;
+					img { margin:0 auto; }
+					.profile-text { margin:10px 0 0; font-size:$fSize-r; color:$fColor-2;
+						&:first-child { margin:15px 0 0 0; }
+					}
+				}
+				.form-info-box { float:left; position:relative; width:800px; padding:0 0 0 20px;
+					$form-width:330px;
+					.line-box { display:table; margin:10px 0 0 0; width:100%;
+						&:first-child { margin:0; }
+						.form-left { float:left; width:$form-width; }
+						.form-right { float:left; margin:0 0 0 10px; width:$form-width; }
+						.input-type-2,
+						.phone-input { float:left; display:inline; width:240px; border-right:0; }
+						.email-input { width:290px; }
+						.email-gap { padding:0 0 0 13px; font-size:$fSize-r; }
+						.phone-btn { float:left; display:inline;  @include btnStyle(90px, 40px, #fff, #555); color:#fff; border:1px solid $borderColor-1; border-left:0; border-radius:0; }
+						.text-p { margin:25px 0 0 0; }
+					}
+					.form-agree-box { clear:both; width:330px; overflow:hidden; padding:13px 0 0 0;
+						.agree-view {
+							float: right;
+							a {
+								display:block;
+								color: $baseColor;
+								line-height: 20px;
+								border-bottom:1px solid $baseColor;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//두번째 폼
+		.form-chart-2 {
+			.line-box { display:table; width:100%; padding:12px 0; border-bottom:1px solid $borderColor-1;
+				&:last-child { border:0; }
+				.line-title { float:left; width:189px; text-align:center; color:$baseColor2; border-right:1px solid $borderColor-1; }
+				.line-info { float:left; width:889px; padding-left:35px;
+					.check-form { float:left; display:inline; margin:0 0 0 55px; width:100px;
+					}
+				}
+			}
+		}
+
+		//세번째 폼
+		.form-chart-3 {
+			.tab-nav-widget {
+				ul { display:table; width:100%;
+					li { position:relative; float:left; display:inline; width:50%; border-bottom:1px solid $borderColor-1; border-left:1px solid $borderColor-1; @include boxSizing; @include cssTransition(0.2s);
+						&:first-child { border-left:0; }
+						a { display:block; text-align:center; line-height:44px; font-weight:bold; color:$fColor-3; }
+						&.active { background-color:$baseColor2;
+							&:before { content:''; position:absolute; bottom:-10px; left:50%; display:block; margin:0 0 0 -9px; width:19px; height:10px; background:url($i-tab-arrow-on) no-repeat left top;}
+							a { color:#fff; }
+						}
+					}
+				}
+			}
+		}
+
+		//합계 보험료
+		.price-sum-widget { display:table; width:100%; margin:20px 0 0 0; background-color:#fff; height:90px;
+			.title-wrap { float:left; display:inline; position:relative; background-color:#ff7e00; width:294px; height:100%; padding:25px; @include boxSizing;
+				&:before { content:''; position:absolute; right:-14px; top:50%; margin:-10px 0 0 0; width:17px; height:20px; background:url($i-sum-arrow) no-repeat left top; }
+				.title-icon { float:left; }
+				.title-text { float:left; margin:0 0 0 16px; color:#fff;
+					h3 { font-size:$fSize-m; }
+					.title-desc { margin:5px 0 0 0; }
+				}
+			}
+			.price-sum-info { float:left; display:inline; width:785px; padding:25px 20px 25px 45px;
+				.sum-box { float:left; margin:0 0 0 30px;
+					&:first-child { margin:10px 0 0 0; }
+					&:last-child { float:right; }
+					.sum-title { float:left; font-size:$fSize-m; line-height:$fSize-b; }
+					.sum-price { float:left; margin:0 0 0 60px; font-size:$fSize-m;
+						strong { float:left; margin:0 40px 0 0; font-size:$fSize-b; line-height:$fSize-b; }
+						.price-text { float:left;  line-height:$fSize-b; }
+					}
+					.sum-p { text-align:center; font-size:$fSize-r; line-height:24px; }
+					.sum-btn { display:block; margin:5px 0 0 0; @include btnStyle(160px, 40px, #fff, #555); color:#fff; font-weight:bold;
+						&:hover { background-color:#474747; }
+					}
+				}
+			}
+		}
+
+	}
+}

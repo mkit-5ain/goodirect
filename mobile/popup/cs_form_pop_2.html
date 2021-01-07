@@ -1,0 +1,53 @@
+<div class="layer-pop-widget">
+	<div class="pop-bg" onclick="layerClose(this ,false);"></div>
+	<div class="popup-widget" id="cs-form-pop-2">
+		<h3 class="popup-title">팝업타이틀</h3>
+		<div class="popup-contents">
+			<div class="pop-cs-form">
+				<span class="bg-arrow"></span>
+				<form method="get" accept-charset="utf-8" onsubmit="return false;">
+					<fieldset>
+						<div class="sub-form-inner">
+							<div class="title-box">
+								<h3><span class="point"><strong>간단한 정보를 입력하시면</strong></span></h3>
+								<p class="cs-time">보험료 확인이 가능합니다.</p>
+							</div>
+							<div class="sub-form-box">
+								<div class="line-box">
+									<input type="text" value="" placeholder="이름" class="input-type-1">
+								</div>
+								<div class="line-box d-Table input_inner_wrap">
+									<input type="number" value="" placeholder="생년월일(예:19900505)" maxlength="8" class="input-type-2">
+									<div class="btn-check-box">
+										<div class="input-block btn-check-type">
+											<input id="p3-type1" type="radio" name="type" checked="">
+											<label for="p3-type1" class="label-custom">남</label>
+										</div>
+										<div class="input-block btn-check-type">
+											<input id="p3-type2" type="radio" name="type">
+											<label for="p3-type2" class="label-custom">여</label>
+										</div>
+									</div>
+								</div>
+								<div class="line-box d-Table">
+									<input type="number" value="" placeholder="전화번호 ('-'없이 숫자만 입력)" maxlength="11" class="input-type-1">
+								</div>
+							</div>
+							<div class="form-agree-box">
+								<div class="input-block custom-checkbox">
+									<input id="p3-agree" type="checkbox">
+									<label for="p3-agree" class="agree-check">개인정보 수집 및 이용동의</label>
+								</div>
+								<p class="agree-view"><a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/agr_pop');" class="agree-layer-open">자세히보기</a></p>
+							</div>
+							<p class="form-btn-box">
+								<button type="submit"><strong>보험료 즉시 확인</strong></button>
+							</p>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<p class="popup-btn"><button type="button" id="close-btn" class="close-btn">X</button></p>
+		</div>
+	</div>
+</div>

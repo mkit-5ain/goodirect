@@ -1,0 +1,113 @@
+@charset 'utf-8';
+
+.goodtip-widget-wrap { overflow:hidden;
+	.sub-visual-widget { padding:0 0 25px; background:#fff;}
+	.sub-visual-inner{background:#fff;}
+	.qa-list-box{
+		li{
+			&:last-child{border-bottom:0px;}
+		}
+	}
+}
+
+
+//굿팁 카테고리 리스트
+.category-list-widget {background:#fff; margin:10px 0;
+	.category-list-inner{padding-top:20px;
+		.list-title { text-align:left; margin:0 4%;
+			h3 { display:inline-block; *display:inline; *zoom:1; font-size:$fSize-m; }
+			.list-count { display:inline-block; *display:inline; *zoom:1; font-size:$fSize-r; }
+		}
+		.cate-list-wrap { margin:20px 0 0;
+			ul {width:92%; margin:0 4%;
+				li {
+					.list-box { display:table; margin-bottom:10px;
+						.list-img {width:38%; display:inline-block; vertical-align:middle; margin-right:2%;
+							a{ display:block; overflow:hidden;
+								img { display:block; width:100%; }
+							}
+						}
+						.list-info-box {width:60%;  display:inline-block; vertical-align:middle;
+							.list-subject {
+								a { display:block; font-size:$fSize-r;
+									&:hover { text-decoration:underline; color:$baseColor2; }
+								}
+							}
+							.bold{font-size:$fSize-r;}
+						}
+					}
+				}
+			}
+			.list_more_btn{text-align:center; border-top:1px solid #999; height:40px; line-height:40px;
+				span{vertical-align:middle; text-align:center; display:inline-block; padding:0 2px; color:#ff7e00; font-weight:bold;
+					img{width:20px;}
+				}
+			}
+		}
+	}
+	.paging-widget { margin:50px 0 0; }
+
+}
+.js-load {
+    display: none;
+}
+.js-load.active {
+    display: block;
+}
+.is_comp.js-load:after {
+    display: none;
+}
+.btn-wrap, .lists, .main {
+    display: block;
+}
+.main {
+    max-width: 640px;
+    margin: 0 auto;
+}
+.lists {
+    margin-bottom: 4rem;
+}
+.lists__item {
+    padding: 20px;
+    background: #EEE;
+}
+.lists__item:nth-child(2n) {
+    background: #59b1eb;
+    color: #fff;
+}
+.btn-wrap {
+    text-align: center;
+}
+.js-load {
+    display: none;
+}
+.js-load.active {
+    display: block;
+}
+.is_comp.js-load:after {
+    display: none;
+}
+.btn-wrap, .lists, .main {
+    display: block;
+}
+.main {
+    max-width: 640px;
+    margin: 0 auto;
+}
+.lists {
+    margin-bottom: 4rem;
+}
+.lists__item {
+    padding: 20px;
+    background: #EEE;
+}
+.lists__item:nth-child(2n) {
+    background: #59b1eb;
+    color: #fff;
+}
+.btn-wrap {
+    text-align: center;
+}
+.cate-list-wrap ul li{
+    display:none;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="title" content="타이틀">
+	<meta name="description" content="내용">
+	<meta name="keywords" content="키워드">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<title>굿다이렉트</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<aside id="aside" class="aside_menu"></aside>
+	<div id="wrap">
+		<!-- 헤더 -->
+		<header id="header">
+		</header>
+		<!-- 컨테이너 -->
+		<main id="container">
+			<article id="contents">
+				<!-- 메인 인덱스 영역(시작) -->
+				<section class="main_widget_wrap">
+					<div class="main-widget-inner">
+						<!-- 추천 보험 시작 -->
+						<div class="main-special-widget">
+							<div class="main-widget-title"><h3><strong>이달의 추천보험</strong></h3></div>
+							<div class="main-special-list">
+								<ul class="special-list-slider">
+									<li>
+										<div class="list-box">
+											<div class="list-subject">
+												<h4><strong>암보험</strong></h4>
+												<p class="list-logo"><img src="../image/main/logo/logo-meritz.gif" alt="메리츠화재"></p>
+											</div>
+											<div class="list-img">
+												<p class="pr-img-p"><img src="../image/main/sample/pr_img_1.jpg" alt="이미지" class="hover-img"></p>
+											</div>
+											<div class="list-btn">
+												<a href="../product/list.html">보험료 계산</a>
+												<a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/cs_form_pop_3');">상담 신청</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="list-box">
+											<div class="list-subject">
+												<h4><strong>암보험</strong></h4>
+												<p class="list-logo"><img src="../image/main/logo/logo-meritz.gif" alt="메리츠화재"></p>
+											</div>
+											<div class="list-img">
+												<p class="pr-img-p"><img src="../image/main/sample/pr_img_1.jpg" alt="이미지" class="hover-img"></p>
+											</div>
+											<div class="list-btn">
+												<a href="../product/list.html">보험료 계산</a>
+												<a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/cs_form_pop_3');">상담 신청</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="list-box">
+											<div class="list-subject">
+												<h4><strong>암보험</strong></h4>
+												<p class="list-logo"><img src="../image/main/logo/logo-meritz.gif" alt="메리츠화재"></p>
+											</div>
+											<div class="list-img">
+												<p class="pr-img-p"><img src="../image/main/sample/pr_img_1.jpg" alt="이미지" class="hover-img"></p>
+											</div>
+											<div class="list-btn">
+												<a href="../product/list.html">보험료 계산</a>
+												<a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/cs_form_pop_3');">상담 신청</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 추천 보험 끝 -->
+						<!-- 메인 입력폼 박스 -->
+						<section class="main_form_area">
+							<!-- 입력 폼 시작 -->
+							<div class="main-form-widget">
+								<form method="get" accept-charset="utf-8" onsubmit="return false;">
+									<fieldset>
+										<div class="main-form-inner">
+											<h3><strong>똑똑한 보험비교,</strong> <span class="point"><strong>굿다이렉트!</strong></span></h3>
+											<div class="main-form-box">
+												<div class="line-box form-select select-1 customSelect select-type-1">
+													<p class="txt"></p>
+													<select>
+														<option class="select-name" value="보험종류선택" selected="selected">보험종류선택</option>
+														<option class="select-name" value="1">1</option>
+														<option class="select-name" value="2">2</option>
+														<option class="select-name" value="3">3</option>
+														<option class="select-name" value="4">4</option>
+													</select>
+												</div>
+												<div class="line-box">
+													<input type="text" value="" placeholder="이름" class="input-type-1">
+												</div>
+												<div class="line-box d-Table">
+													<div class="input_wrap">
+														<div class="input_inner_wrap">
+															<input type="number" value="" placeholder="생년월일(예:19900505)" maxlength="8" class="input-type-2">
+														</div>
+													</div>
+													<div class="btn-check-box">
+														<div class="input-block btn-check-type">
+															<input id="type1" type="radio" name="type" checked>
+															<label for="type1" class="label-custom">남</label>
+														</div>
+														<div class="input-block btn-check-type">
+															<input id="type2" type="radio" name="type">
+															<label for="type2" class="label-custom">여</label>
+														</div>
+													</div>
+												</div>
+												<div class="line-box">
+													<input type="number" value="" placeholder="전화번호 ('-'없이 숫자만 입력')" maxlength="11" class="input-type-1">
+												</div>
+											</div>
+											<div class="form-agree-box">
+												<div class="input-block custom-checkbox">
+													<input id="i1-agree" type="checkbox">
+													<label for="i1-agree" class="agree-check">개인정보 수집 및 이용동의</label>
+												</div>
+												<p class="agree-view"><a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/agr_pop');" class="agree-layer-open">자세히보기</a></p>
+											</div>
+											<p class="form-btn-box">
+												<button type="submit"><strong>즉시 상담 신청</strong></button>
+											</p>
+											<div class="form-cs-box">
+												<p class="cs-p"><strong>빠른 전화상담 1688-0889</strong></p>
+												<p class="cs-p">(평일 오전9시~오후6시까지, 토/일/공휴일 휴무)</p>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<!-- 입력 폼 끝 -->
+							<!-- 슬라이드 배너 시작 -->
+							<section>
+								<div class="main-slide-banner">
+									<ul class="main-banner-slider">
+										<li><a href=""><img src="../image/main/main_slide_banner1.jpg" alt=""></a></li>
+										<li><a href=""><img src="../image/main/main_slide_banner1.jpg" alt=""></a></li>
+										<li><a href=""><img src="../image/main/main_slide_banner1.jpg" alt=""></a></li>
+										<li><a href=""><img src="../image/main/main_slide_banner1.jpg" alt=""></a></li>
+									</ul>
+								</div>
+							</section>
+							<!-- 슬라이드 배너 끝 -->
+							<!-- 서비스 배너-->
+							<div class="main-service-widget">
+								<a href="../smart/smart_price.html" class="service-cal-btn">
+									<div class="form-cs-box">
+										<p class="cs-p point2"><strong>스마트 가격비교 서비스</strong></p>
+										<p class="cs-p">한번의 정보입력으로 쉽고, 빠르게 보험별 <span class="point2 bold">월 보험료 즉시 할인</span></p>
+									</div>
+								</a>
+							</div>
+							<!-- 서비스 배너 끝 -->
+							<!-- 메인 굿팁 -->
+							<div class="main_tip_widget">
+								<div class="main-widget-title">
+									<h3><strong>굿다이렉트 굿팁</strong></h3>
+									<p class="more-btn"><a href="../goodtip/goodtip.html"><strong>+</strong></a></p>
+								</div>
+								<div class="tip_list_box">
+									<div>
+										<a href="../goodtip/view.html">
+											<img src="../image/main/sample/tip_img_1.jpg" alt="">
+											<div>
+												<p>아는 만큼 할인받는 자동차</p>
+												<p>보험료 절약 꿀팁!</p>
+											</div>
+											<p class="tip_name">자동차 보험</p>
+										</a>
+									</div>
+									<div>
+										<a href="../goodtip/view.html">
+											<img src="../image/main/sample/tip_img_1.jpg" alt="">
+											<div>
+												<p>아는 만큼 할인받는 자동차</p>
+												<p>보험료 절약 꿀팁!</p>
+											</div>
+											<p class="tip_name">자동차 보험</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 메인 굿팁 끝 -->
+							<!-- 보험 문의 시작 -->
+							<div class="main-qa-widget">
+								<div class="main-widget-title">
+									<h3><strong>보험문의 게시판</strong></h3>
+									<p class="more-btn"><a href="../board/qa_list.html"><strong>+</strong></a></p>
+								</div>
+								<div class="qa-list-box">
+									<ul>
+										<li><a href="../board/qa_read.html"><span class="number">1</span><span class="text">굿다이렉트는 다른 보험 비교 사이트와 어떻게 ...</span></a></li>
+										<li><a href="../board/qa_read.html"><span class="number">2</span><span class="text">굿다이렉트는 다른 보험 비교 사이트와 어떻게 ...</span></a></li>
+										<li><a href="../board/qa_read.html"><span class="number">3</span><span class="text">굿다이렉트는 다른 보험 비교 사이트와 어떻게 ...</span></a></li>
+										<li><a href="../board/qa_read.html"><span class="number">4</span><span class="text">굿다이렉트는 다른 보험 비교 사이트와 어떻게 ...</span></a></li>
+										<li><a href="../board/qa_read.html"><span class="number">5</span><span class="text">굿다이렉트는 다른 보험 비교 사이트와 어떻게 ...</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- 메인 입력폼 박스 -->
+					</div>
+				</section>
+				<!-- 메인 인덱스 영역(끝)-->
+			</article>
+		</main>
+		<!-- 푸터 -->
+		<footer id="footer">
+		</footer>
+		<!-- 퀵매뉴 -->
+		<div id="quick">
+		</div>
+	</div>
+	<div class="opacity_wrap"></div>
+	<script type="text/javascript" src="../js/require.config.js"></script>
+	<script type="text/javascript" data-main="../js/pages/index" src="../js/lib/require.js"></script>
+</body>
+</html>

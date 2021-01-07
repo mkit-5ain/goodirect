@@ -1,0 +1,608 @@
+@charset 'utf-8';
+
+.list-widget-wrap {
+	//페이지 타이틀
+	.sub-visual-widget {
+		background-color: #fff;
+/*		border-bottom: 1px solid $borderColor-1;*/
+		.sub-visual-inner {
+			margin: 0 4%;
+		}
+	}
+	.list-form-widget {
+		border-top: 2px solid $borderColor-4;
+	}
+	.visual-cate-wrap {
+		margin: 0 auto 40px;
+		ul {
+			li:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.list-widget-wrap {
+	.list-form-widget {
+		padding: 20px 0;
+		.form-top-wrap {
+			display: table;
+			width: 100%;
+			border-bottom: 1px solid $borderColor-1;
+			padding-bottom: 20px;
+			.point1 {
+				color: $baseColor;
+			}
+			h3 {
+				text-align: center;
+				font-size: $fSize-ba;
+				margin: 0 0 20px;
+			}
+			.form-img-box {
+				float: left;
+				text-align: center;
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+				.text-box {
+					margin: 10px 0 0 0;
+				}
+			}
+			.form-info-box {
+				position: relative;
+				margin-bottom: 10px;
+				$form-width: 330px;
+				.line-box {
+					display: table;
+					margin: 10px 0 0 0;
+					width: 100%;
+					&:first-child {
+						margin: 0;
+					}
+
+					.box_wrap {
+						width: 100%;
+						display: table;
+						margin-top: 10px;
+						&:first-child {
+							margin-top: 0px;
+						}
+					}
+
+					.box-name {
+						width: 25%;
+						float: left;
+						line-height: 40px;
+						color: $fColor-2;
+					}
+					.box-info {
+						width: 75%;
+						float: left;
+					}
+
+					.input-type-2 {}
+					.box-info {}
+					.text-p {
+						margin: 25px 0 0 0;
+					}
+				}
+				.form-agree-box {
+					clear: both;
+					overflow: hidden;
+					padding: 13px 0 0 0;
+					.agree-view {
+						float: right;
+						a {
+							display: block;
+							color: $baseColor;
+							line-height: 20px;
+							border-bottom: 1px solid $baseColor;
+						}
+					}
+				}
+			}
+			.form-btn-box {
+				button {
+					@include btnStyle(100%, 40px, #fff, #18b3af);
+					color: #fff;
+					font-weight: bold;
+					font-size: $fSize-r;
+					&:hover {
+						background-color: #149996;
+					}
+				}
+			}
+		}
+		.form-comment-wrap {
+			clear: both;
+			margin: 20px 0 0 0;
+			text-align: center;
+			font-size: 0;
+			letter-spacing: 0;
+			word-spacing: 0;
+			zoom: 1;
+			>* {
+				width: 100%;
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+				vertical-align: middle;
+			}
+			.comment-text {
+				margin: 0 0px 15px 0;
+				font-size: $fSize-ba;
+			}
+			.na-btn {
+				float: left;
+				display: inline;
+				border: 1px solid $naver-color;
+				@include btnStyle(48%, 30px, $naver-color, transparent);
+				strong {
+					padding-left: 20px;
+					background: url($n-icon) no-repeat left center;
+					font-size: $fSize-ba;
+					background-size: 16px;
+				}
+			}
+			.fb-btn {
+				float: left;
+				display: inline;
+				margin: 0 0 0 8px;
+				border: 1px solid $facebook-color;
+				@include btnStyle(48%, 30px, $facebook-color, transparent);
+				strong {
+					padding-left: 15px;
+					background: url($f-icon) no-repeat left center;
+					font-size: $fSize-ba;
+					background-size: 8px;
+				}
+			}
+		}
+	}
+}
+
+
+
+//상품 리스트
+.list-product-wrap {
+	li {
+		margin: 10px 0 0 0;
+		&:first-child {
+			margin: 0;
+		}
+	}
+	.list-box {
+		display: table;
+		width: 100%;
+		background-color: #fff;
+		border-top: 1px solid $borderColor-1;
+		border-bottom: 1px solid $borderColor-1;
+		padding: 20px 4%;
+		.list-left-widget {
+			.logo-box {
+				width: 100%;
+			}
+			.pr-box {
+				position: relative;
+				display: table;
+				h3 {
+					width: 30%;
+					display: inline-block;
+					*display: inline;
+					*zoom: 1;
+					vertical-align: top;
+					img {
+						width: 100px;
+					}
+				}
+				.pr-number {
+					width: 70%;
+					display: inline-block;
+					*display: inline;
+					*zoom: 1;
+					vertical-align: bottom;
+					color: $fColor-3;
+					font-size: $fSize-s;
+					text-align: right;
+					vertical-align: middle;
+				}
+			}
+			.pr-text {
+				margin: 20px 0 20px 0;
+				font-size: $fSize-m;
+				a:hover {
+					color: $baseColor2;
+				}
+			}
+			.pr-price {
+				font-size: $fSize-r;
+				display: inline-block;
+				vertical-align: middle;
+				.price {
+					display: inline-block;
+					text-align: right;
+					font-size: 25px;
+				}
+				.unit-sub {
+				}
+				.unit-sub-2 {
+					font-size: $fSize;
+				}
+			}
+			.info-btn {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+				margin: 0 0 0 5px;
+				width: 18px;
+				height: 18px;
+				line-height: 18px;
+				text-align: center;
+				font-size: $fSize-s;
+				color: #fff;
+				background-color: #555;
+				border-radius: 10px;
+				font-weight: bold;
+				vertical-align:middle;
+			}
+		}
+
+		.list-right-widget {
+			position: relative;
+			float: right;
+
+			.label-icon {
+				position: absolute;
+				right: 0;
+				top: -80px;
+				padding: 14px 0 0;
+				width: 55px;
+				height: 55px;
+				font-size: $fSize-s;
+				background-color: $baseColor2;
+				border-radius: 100%;
+				@include boxSizing;
+				span {
+					display: block;
+					color: #fff;
+					text-align: center;
+				}
+			}
+
+
+			button {
+				float: left;
+				display: inline;
+				font-weight: bold;
+				margin: 0 0 0 8px;
+			}
+			.list-btn-1 {
+				@include btnStyle(90px, 30px, #fff, #3e95e5);
+			}
+			.list-btn-2 {
+				@include btnStyle(90px, 30px, #fff, #555);
+			}
+			.list-btn-3 {
+				@include btnStyle(90px, 30px, #fff, #999);
+			}
+		}
+		.pr-top-widget {
+			display: table;
+			width: 100%;
+			padding: 0 0 25px;
+		}
+		.pr-bottom-widget {
+			clear: both;
+			padding: 25px 30px 0;
+			border-top: 1px solid $borderColor-1;
+			.pr-desc-box {
+				display: table;
+				width: 100%;
+				.pr-desc-info {
+					float: left;
+					display: inline;
+					margin: 0 0 0 60px;
+					&:first-child {
+						margin: 0;
+					}
+					.info-name {
+						color: $fColor-2;
+					}
+					.info-desc {
+						margin: 5px 0 0;
+						color: $fColor-2;
+						.point {
+							font-size: $fSize-m;
+						}
+						.ms-text {
+							color: $fColor-3;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//안내 텍스트 팝업
+.layer-text {
+	right: -245px;
+	top: -8px;
+	width: 234px;
+	height: 56px;
+}
+
+//문의 게시판
+.list-bottom-widget {
+	margin-top:10px;
+	padding: 0 0 20px;
+	border-top: 1px solid $borderColor-1;
+	background-color: #fff;
+
+	.list-tab-widget {
+		.ft_tab_widget {
+			ul {
+				li {
+					a {
+						display: block;
+						line-height: 50px;
+						text-align: center;
+						font-weight: bold;
+						color: $fColor-2;
+						border-bottom: 1px solid $borderColor-1;
+						@include boxSizing;
+					}
+					&:first-child {
+						a {
+							border-right: 0;
+						}
+					}
+				}
+				.active {
+					a {
+						color: #fff;
+						background-color: $baseColor2;
+					}
+				}
+			}
+		}
+		.pr-info-box {
+			display: table;
+			width: 100%;
+			height: 46px;
+			margin: 20px 0 0 0;
+			padding: 15px 20px;
+			background-color: #f2f4f7;
+			.info-desc {
+				float: left;
+				display: inline;
+				font-size: $fSize-r;
+				line-height: 24px;
+			}
+			.info-btn-area {
+				float: right;
+				ul {
+					display: table;
+					li {
+						float: left;
+						margin: 0 0 0 15px;
+						padding: 0 0 0 15px;
+						font-size: $fSize-r;
+						line-height: 24px;
+						background: url('../image/detail/info_bar.jpg') no-repeat left center;
+						&:first-child {
+							margin: 0;
+							padding: 0;
+							background: none;
+						}
+						a {
+							display: block;
+							font-size: $fSize-r;
+							line-height: 24px;
+							border-bottom: 1px solid $borderColor-4;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+		.tab-contents-widget {}
+		.basic-tab-contents {
+			.widget-title {
+				display: table;
+				width: 100%;
+				margin: 0 0 10px;
+				h3 {
+					float: left;
+					font-size: $fSize-m;
+					line-height: 30px;
+				}
+				.board-btn {
+					float: right;
+					a {
+						float: left;
+						display: inline;
+						color: #fff;
+						font-weight: bold;
+					}
+					.write-btn {
+						@include btnStyle(100px,
+						30px,
+						#fff,
+						#222);
+						&:hover {
+							background-color: #000;
+						}
+					}
+					.all-btn {
+						margin: 0 0 0 9px;
+						@include btnStyle(100px,
+						30px,
+						#fff,
+						#555);
+						&:hover {
+							background-color: #414141;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.list-form-widget {
+		margin: 20px 0 0 0;
+		padding: 20px;
+		border: 1px solid $borderColor-2;
+		border-top: 2px solid $borderColor-4;
+		.form-top-wrap {
+			display: table;
+			width: 100%;
+			.form-img-box {
+				float: left;
+				margin: 10px 0 0;
+				text-align: center;
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+				.text-box {
+					margin: 10px 0 0 0;
+				}
+			}
+			.form-info-box {
+				float: left;
+				position: relative;
+				margin: 0 0 0 20px;
+				$form-width: 330px;
+				.line-box {
+					display: table;
+					margin: 10px 0 0 0;
+					width: 100%;
+					&:first-child {
+						margin: 0;
+					}
+					.left-box {
+						float: left;
+						width: $form-width;
+					}
+					.right-box {
+						float: left;
+						margin: 0 0 0 20px;
+						width: $form-width;
+					}
+					.input-type-2 {
+						width: 240px;
+					}
+					.text-p {
+						margin: 25px 0 0 0;
+					}
+				}
+				.form-agree-box {
+					clear: both;
+					width: 280px;
+					overflow: hidden;
+					padding: 13px 0 0 0;
+					.agree-view {
+						float: right;
+						a {
+							display: block;
+							color: $baseColor;
+							line-height: 20px;
+							border-bottom: 1px solid $baseColor;
+						}
+					}
+				}
+			}
+			.form-btn-box {
+				float: right;
+				button {
+					@include btnStyle(150px,
+					90px,
+					#fff,
+					$baseColor);
+					color: #fff;
+					line-height: 20px;
+					font-weight: bold;
+					font-size: $fSize-r;
+					&:hover {
+						background-color: #eb7400;
+					}
+				}
+			}
+		}
+		.form-comment-wrap {
+			clear: both;
+			margin: 20px 0 0 0;
+			text-align: center;
+			font-size: 0;
+			letter-spacing: 0;
+			word-spacing: 0;
+			zoom: 1;
+			>* {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+				vertical-align: middle;
+			}
+			.comment-text {
+				margin: 0 15px 0 0;
+				line-height: 30px;
+				font-size: $fSize-r;
+			}
+		}
+	}
+}
+
+// 버튼
+.board-bottom-widget.list {
+	.list-btn-box {
+		width: 92%;
+		margin: 0 4%;
+		display: table;
+		p {
+			&:first-child {
+				width: 49%;
+				float: left;
+			}
+			&:last-child {
+				width: 49%;
+				float: right;
+			}
+		}
+	}
+}
+
+// 자동차 보험 리스트
+.list_direct {
+	padding-bottom: 10px!important;
+	.form-top-wrap {
+		border-bottom: 0px!important;
+		padding-bottom: 0px!important;
+	}
+	.board-list-toggle {
+		border-top: 1px solid #999!important;
+	}
+	.pr-bottom-widget {
+		border-top: 1px solid #999!important;
+	}
+	.list-btn-1 {
+		background-color: #fff!important;
+		border: 1px solid #3e95e5!important;
+		color: #3e95e5!important;
+		border-radius: 0px!important;
+	}
+}
+
+// 보험사별 리스트
+.list_life{
+	.pr-text{width:100%; font-size:14px!important;
+		a{display:inline-block; vertical-align:middle; width:80%;}
+		p{display:inline-block; vertical-align:middle; width:20%;
+			span{float: right; background: #3e95e5; color: #fff; padding:4px; border-radius:4px; font-size:12px;}
+		}
+	}
+	.list-right-widget{
+		.list-btn-1{border:1px solid #3e95e5!important; color:#3e95e5!important; background:#fff!important;}
+	}
+}

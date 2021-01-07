@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="title" content="타이틀">
+	<meta name="description" content="내용">
+	<meta name="keywords" content="키워드">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="shortcut icon" href="../image/favicon.ico">
+	<title>굿다이렉트</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<aside id="aside" class="aside_menu"></aside>
+	<div id="wrap" class="margin_b">
+		<!-- 헤더 -->
+		<header id="header">
+		</header>
+		<!-- 컨테이너 -->
+		<main id="container">
+			<article id="contents">
+				<!-- 상품 리스트 영역(시작) -->
+				<section class="list-widget-wrap">
+					<div class="list-widget-inner">
+						<!-- 서브 비쥬얼 -->
+						<div class="sub-visual-widget">
+							<div class="sub-visual-inner widget-size">
+								<div class="visual-title-wrap">
+									<h2 class="widget-title">치아보험</h2>
+									<p class="sub-title-desc">갈 때마다 큰 돈 들어 부담스러운 치과치료,<br>치아보험이 있다면 얼마나 절약될까?</p>
+								</div>
+								<!-- 리스트 입력폼 영역  -->
+								<div class="list-form-widget">
+									<form method="get" accept-charset="utf-8" onsubmit="return false;">
+										<fieldset>
+											<div class="form-top-wrap">
+												<h3><span class="point1">기본 정보</span>를 입력하시면,<br><span class="point1">숨겨진 보험료 확인</span>이 가능합니다</h3>
+												<div class="form-info-box">
+													<div class="line-box">
+														<div><input type="text" value="" placeholder="이름" class="input-type-1"></div>
+													</div>
+													<div class="line-box">
+														<div class="input_inner_wrap">
+															<input type="number" value="" placeholder="생년월일(예:19900505)" maxlength="8" class="input-type-2">
+															<div class="btn-check-box">
+																<div class="input-block btn-check-type">
+																	<input id="type1" type="radio" name="type-1" checked>
+																	<label for="type1" class="label-custom">남</label>
+																</div>
+																<div class="input-block btn-check-type">
+																	<input id="type2" type="radio" name="type-1">
+																	<label for="type2" class="label-custom">여</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="line-box">
+														<div><input type="number" value="" placeholder="전화번호('-'없이 숫자만 입력)" maxlength="11" class="input-type-1"></div>
+														<div>
+															<div class="form-agree-box">
+																<div class="input-block custom-checkbox">
+																	<input id="l1-agree" type="checkbox">
+																	<label for="l1-agree" class="agree-check">개인정보 수집 및 이용동의</label>
+																</div>
+																<p class="agree-view"><a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/agr_pop');" class="agree-layer-open">자세히보기</a></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-btn-box">
+													<button type="button">내 보험료 즉시 계산</button>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+									<div class="form-comment-wrap">
+										<p class="comment-text">정보입력없이<span class="point2"> 로그인 한 번으로 보험료를 확인</span>하세요!</p>
+										<div class="comment-btn">
+											<a href="" class="na-btn"><strong>네이버</strong></a>
+											<a href="" class="fb-btn"><strong>페이스북</strong></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list-product-wrap">
+							<ul class="list-product-inner widget-size">
+								<li>
+									<div class="list-box">
+										<div class="list-left-widget">
+											<div class="pr-box logo-box">
+												<h3><img src="../image/list/kb_logo.png" alt="KB손해보험"></h3>
+												<span class="pr-number">생명보험협회 심의필 제2017-2509호<br>(2017.05.30)</span>
+											</div>
+											<p class="pr-box pr-text"><a href="../product/detail.html"><strong>(무)THE든든한치아보험Ⅱ(갱신형) 치아+보철 플랜</strong></a></p>
+											<div class="pr-box pr-price">
+												<strong class="price">?</strong><span class="unit"> 원</span>
+												<span class="unit-sub"> / 월</span>
+												<a href="javascript:void(0)" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="info-btn">?</a>
+												<div class="layer-text hide">
+													<div class="info-text-widget">
+														<div class="info-layer-box">
+															<p>기본 정보를 입력하시면,<br/>숨겨진 보험료 확인이 가능합니다.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="list-right-widget">
+												<button type="button" class="list-btn-1 toggle_v_btn">상담신청</button>
+												<!-- <button type="button" onclick="location.href='../smart/smart_price.html'" class="list-btn-2">상품비교</button>
+												<button type="button" onclick="location.href='../smart/smart_product.html'" class="list-btn-3">직접설계</button> -->
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list-box">
+										<div class="list-left-widget">
+											<div class="pr-box logo-box">
+												<h3><img src="../image/list/kb_logo.png" alt="KB손해보험"></h3>
+												<span class="pr-number">생명보험협회 심의필 제2017-2509호<br>(2017.05.30)</span>
+											</div>
+											<p class="pr-box pr-text"><a href="../product/detail.html"><strong>(무)THE든든한치아보험Ⅱ(갱신형) 치아+보철 플랜</strong></a></p>
+											<div class="pr-box pr-price">
+												<strong class="price point3">150,000</strong><span class="unit"> 원</span>
+												<span class="unit-sub"> / 월</span>
+												<a href="javascript:void(0)" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="info-btn">?</a>
+												<div class="layer-text hide">
+													<div class="info-text-widget">
+														<div class="info-layer-box">
+															<p>기본 정보를 입력하시면,<br/>숨겨진 보험료 확인이 가능합니다.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="list-right-widget">
+												<button type="button" class="list-btn-1 toggle_v_btn">상담신청</button>
+												<!-- <button type="button" onclick="location.href='../smart/smart_price.html'" class="list-btn-2">상품비교</button>
+												<button type="button" onclick="location.href='../smart/smart_product.html'" class="list-btn-3">직접설계</button> -->
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list-box">
+										<div class="list-left-widget">
+											<div class="pr-box logo-box">
+												<h3><img src="../image/list/kb_logo.png" alt="KB손해보험"></h3>
+												<span class="pr-number">생명보험협회 심의필 제2017-2509호<br>(2017.05.30)</span>
+											</div>
+											<p class="pr-box pr-text"><a href="../product/detail.html"><strong>(무)THE든든한치아보험Ⅱ(갱신형) 치아+보철 플랜</strong></a></p>
+											<div class="pr-box pr-price">
+												<strong class="price point3">150,000</strong><span class="unit"> 원</span>
+												<span class="unit-sub"> / 월</span>
+												<a href="javascript:void(0)" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="info-btn">?</a>
+												<div class="layer-text hide">
+													<div class="info-text-widget">
+														<div class="info-layer-box">
+															<p>기본 정보를 입력하시면,<br/>숨겨진 보험료 확인이 가능합니다.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="list-right-widget">
+												<button type="button" class="list-btn-1 toggle_v_btn">상담신청</button>
+												<!-- <button type="button" onclick="location.href='../smart/smart_price.html'" class="list-btn-2">상품비교</button>
+												<button type="button" onclick="location.href='../smart/smart_product.html'" class="list-btn-3">직접설계</button> -->
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 상세 탭 영역 -->
+					<div class="list-bottom-widget">
+						<div class="list-bottom-inner widget-size">
+							<div class="list-tab-widget">
+								<div class="ft_tab_widget">
+									<ul class="list-type-2">
+										<li class="active" rel="tab-list-6"><a href="javascript:void(0);">자동차보험 선택 GoodTip!</a></li>
+										<li rel="tab-list-7"><a href="javascript:void(0);">상품문의</a></li>
+									</ul>
+								</div>
+								<div class="tab-contents-widget">
+									<div id="tab-list-6" class="ft_tab_contents">
+										<div class="editor_wrap">
+											<div class="center">에디터 입력</div>
+										</div>
+									</div>
+									<div id="tab-list-7" class="ft_tab_contents hide">
+										<div class="board-list-widget">
+											<div class="qa-table-widget">
+												<div class="qa_table_inner">
+													<div class="qa_title">
+														<div class="title">치아보험</div>
+														<div class="writer">김*이<span class="date">2017.07.18</span></div>
+													</div>
+													<div class="subject">
+														<a href="../board/qa_read.html" class="subject-link">
+															<div class="q-subject">
+																<span class="q-icon subject-icon">Q</span>
+																<span class="q-subject subject-text"><strong>39세 남자 치아보험 문의 드립니다.</strong></span>
+															</div>
+															<div class="a-subject">
+																<span class="a-icon subject-icon">A</span>
+																<span class="a-subject subject-text">전문설계사의 답변이 작성중입니다.</span>
+															</div>
+														</a>
+													</div>
+												</div>
+												<div class="qa_table_inner">
+													<div class="qa_title">
+														<div class="title">치아보험</div>
+														<div class="writer">김*이<span class="date">2017.07.18</span></div>
+													</div>
+													<div class="subject">
+														<a href="../board/qa_read.html" class="subject-link">
+															<div class="q-subject">
+																<span class="q-icon subject-icon">Q</span>
+																<span class="q-subject subject-text"><strong>39세 남자 치아보험 문의 드립니다.</strong></span>
+															</div>
+															<div class="a-subject">
+																<span class="a-icon subject-icon">A</span>
+																<span class="a-subject subject-text">전문설계사의 답변이 작성중입니다.</span>
+															</div>
+														</a>
+													</div>
+												</div>
+												<div class="qa_table_inner">
+													<div class="qa_title">
+														<div class="title">치아보험</div>
+														<div class="writer">김*이<span class="date">2017.07.18</span></div>
+													</div>
+													<div class="subject">
+														<a href="../board/qa_read.html" class="subject-link">
+															<div class="q-subject">
+																<span class="q-icon subject-icon">Q</span>
+																<span class="q-subject subject-text"><strong>39세 남자 치아보험 문의 드립니다.</strong></span>
+															</div>
+															<div class="a-subject">
+																<span class="a-icon subject-icon">A</span>
+																<span class="a-subject subject-text">전문설계사의 답변이 작성중입니다.</span>
+															</div>
+														</a>
+													</div>
+												</div>
+												<div class="qa_table_inner">
+													<div class="qa_title">
+														<div class="title">치아보험</div>
+														<div class="writer">김*이<span class="date">2017.07.18</span></div>
+													</div>
+													<div class="subject">
+														<a href="../board/qa_read.html" class="subject-link">
+															<div class="q-subject">
+																<span class="q-icon subject-icon">Q</span>
+																<span class="q-subject subject-text"><strong>39세 남자 치아보험 문의 드립니다.</strong></span>
+															</div>
+															<div class="a-subject">
+																<span class="a-icon subject-icon">A</span>
+																<span class="a-subject subject-text">전문설계사의 답변이 작성중입니다.</span>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="board-bottom-widget list">
+											<!-- 리스트 페이징 -->
+											<div class="paging-widget">
+												<p class="prev-paging"><a href=""><img src="../image/icon/p_type_01.png" alt="이전"></a></p>
+												<ul class="paging-ul">
+													<li><a href="" class="active">1</a></li>
+													<li><a href="">2</a></li>
+													<li><a href="">3</a></li>
+													<li><a href="">4</a></li>
+													<li><a href="">5</a></li>
+												</ul>
+												<p class="next-paging"><a href=""><img src="../image/icon/n_type_01.png" alt="다음"></a></p>
+											</div>
+											<div class="list-btn-box">
+												<p><a href="../board/qa_write.html" class="write-btn">문의하기</a></p>
+												<p><a href="../board/qa_list.html" class="all-btn">전체보기</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- 상품 리스트 영역(끝) -->
+			</article>
+		</main>
+		<!-- 푸터 -->
+		<footer id="footer">
+		</footer>
+		<!-- 퀵매뉴 -->
+		<div id="quick">
+		</div>
+	</div>
+	<div id="footerMenu" class="fixed-input">
+	</div>
+	<div class="opacity_wrap"></div>
+	<script type="text/javascript" src="../js/require.config.js"></script>
+	<script type="text/javascript" data-main="../js/pages/sub" src="../js/lib/require.js"></script>
+</body>
+</html>

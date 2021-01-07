@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="title" content="타이틀">
+	<meta name="description" content="내용">
+	<meta name="keywords" content="키워드">
+	<meta name="viewport" content="width=1080">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>굿다이렉트</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<aside id="aside" class="aside_menu"></aside>
+	<div id="wrap">
+		<!-- 헤더 -->
+		<header id="header">
+		</header>
+		<!-- 컨테이너 -->
+		<main id="container">
+			<article id="contents">
+				<!-- 스마트 가격비교 영역(시작) -->
+				<section class="sub-widget-wrap">
+					<div class="sub-widget-inner smart-price-page">
+						<!-- 서브 비쥬얼 -->
+						<div class="sub-visual-widget">
+							<div class="sub-visual-inner widget-size">
+								<div class="visual-title-wrap">
+									<h2 class="sub-title"><strong>스마트한 보험비교 굿다이렉트</strong></h2>
+									<p class="sub-title-desc">한번의 정보입력으로 보험 종류별 <br>내 보험료 한눈에 비교!</p>
+								</div>
+								<div class="visual-comment-wrap">
+									<p class="comment-text">정보입력없이<span class="point2">로그인 한 번으로 보험료를 확인</span>하세요</p>
+									<div class="comment-btn">
+										<a href="" class="na-btn"><strong>네이버</strong></a>
+										<a href="" class="fb-btn"><strong>페이스북</strong></a>
+									</div>
+								</div>
+								<div class="visual-widget-wrap">
+									<!-- 입력 폼 시작 -->
+									<div class="sub-form-widget">
+										<form method="get" accept-charset="utf-8" onsubmit="return false;">
+											<fieldset>
+												<div class="sub-form-inner">
+													<div class="form-desc-box">
+														<p>"단 한번의 정보입력으로"</p>
+														<p class="point">월보험료&보장내용 한번에 확인</p>
+													</div>
+													<div class="sub-form-box">
+														<div class="line-box">
+															<input type="text" value="" placeholder="이름" class="input-type-1">
+														</div>
+														<div class="line-box d-Table input_inner_wrap">
+															<input type="number" value="" placeholder="생년월일(예:19900505)" maxlength="8" class="input-type-2">
+															<div class="btn-check-box">
+																<div class="input-block btn-check-type">
+																	<input id="type1" type="radio" name="type" checked>
+																	<label for="type1" class="label-custom">남</label>
+																</div>
+																<div class="input-block btn-check-type">
+																	<input id="type2" type="radio" name="type">
+																	<label for="type2" class="label-custom">여</label>
+																</div>
+															</div>
+														</div>
+														<div class="line-box d-Table">
+															<input type="number" value="" placeholder="전화번호 ('-'없이 숫자만 입력)" maxlength="11" class="input-type-1 phone-input">
+														</div>
+													</div>
+													<div class="form-agree-box">
+														<div class="input-block custom-checkbox">
+															<input id="s1-agree" type="checkbox">
+															<label for="s1-agree" class="agree-check">개인정보 수집 및 이용동의</label>
+														</div>
+														<p class="agree-view"><a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/agr_pop');" class="agree-layer-open">자세히보기</a></p>
+													</div>
+													<div class="form-text-box">
+														<p>*보험료 계산 시, 정확한 보험료 안내를 위해</p>
+														<p>전문 상담원이 전화를 드립니다.</p>
+													</div>
+													<p class="form-btn-box">
+														<button type="submit"><strong>보험료 가격 한눈에 확인</strong></button>
+													</p>
+												</div>
+												<div class="sub-form-arrow"><img src="../image/smart/smart_form_arrow.png"></div>
+											</fieldset>
+										</form>
+									</div>
+									<!-- 입력 폼 끝 -->
+									<!-- 입력 폼2 시작 -->
+									<div class="sub-form-widget2">
+										<div class="sub-form-inner">
+											<h3><strong class="title-text">○○○ 고객님(○세)의 <span class="point">월 보험료</span>는 얼마일까요?</strong></h3>
+											<div class="sub-form-box">
+												<div class="line-box">
+													<h4 class="input-text"><strong>비갱신 암보험</strong></h4>
+													<p class="input-box">
+														<input type="number" value="" placeholder="" class="input-type-3">
+														<strong class="price-text">원</strong>
+													</p>
+													<p class="box-btn">
+														<button type="button" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="input-btn">보장 내용 확인</button>
+													</p>
+												</div>
+												<div class="line-box">
+													<h4 class="input-text"><strong>갱신형 암보험</strong></h4>
+													<p class="input-box">
+														<input type="number" value="" placeholder="" class="input-type-3">
+														<strong class="price-text">원</strong>
+													</p>
+													<p class="box-btn">
+														<button type="button" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="input-btn">보장 내용 확인</button>
+													</p>
+												</div>
+												<div class="line-box">
+													<h4 class="input-text"><strong>운전자보험</strong></h4>
+													<p class="input-box">
+														<input type="number" value="" placeholder="" class="input-type-3">
+														<strong class="price-text">원</strong>
+													</p>
+													<p class="box-btn">
+														<button type="button" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="input-btn">보장 내용 확인</button>
+													</p>
+												</div>
+												<div class="line-box">
+													<h4 class="input-text"><strong>의료실비보험</strong></h4>
+													<p class="input-box">
+														<input type="number" value="" placeholder="" class="input-type-3">
+														<strong class="price-text">원</strong>
+													</p>
+													<p class="box-btn">
+														<button type="button" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="input-btn">보장 내용 확인</button>
+													</p>
+												</div>
+												<div class="line-box">
+													<h4 class="input-text"><strong>정기종신보험</strong></h4>
+													<p class="input-box">
+														<input type="number" value="" placeholder="" class="input-type-3">
+														<strong class="price-text">원</strong>
+													</p>
+													<p class="box-btn">
+														<button type="button" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="input-btn">보장 내용 확인</button>
+													</p>
+												</div>
+												<div class="line-box">
+													<h4 class="input-text"><strong>치아보험</strong></h4>
+													<p class="input-box">
+														<input type="number" value="" placeholder="" class="input-type-3">
+														<strong class="price-text">원</strong>
+													</p>
+													<p class="box-btn">
+														<button type="button" onclick="popupActions(this,'layer-pop-widget','popup','../popup/insu_view_pop');" class="input-btn">보장 내용 확인</button>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 입력 폼2 끝 -->
+								</div>
+							</div>
+						</div>
+						<!-- 서브 비쥬얼 끝 -->
+						<!-- 서브 컨텐츠 시작 -->
+						<div class="sub-contents-wrap">
+							<div class="sub-contents-inner widget-size">
+								<!-- 추천 보험 -->
+								<div class="sub-recom-widget">
+									<h3 class="widget-title"><strong>보험 종류별 굿다이렉트 <span class="point">추천 보험!</span></strong></h3>
+									<div class="recom-widget-inner">
+										<ul class="list-type-1">
+											<li>
+												<div class="recom-box">
+													<div class="recom_info">
+														<p class="recom-logo"><img src="../image/smart/recom/recom_logo1.png" alt="mg손해보험"></p>
+														<h4 class="recom-box-title"><strong>비갱신형 암보험</strong></h
+															4>
+														<p class="recom-desc-text">첫 보험료에서 1원도 오르지 않는 암보험</p>
+													</div>
+													<div class="recom_btn"><a href="javascript:void(0);"><strong>자세히<br>보기</strong></a></div>
+												</div>
+											</li>
+											<li>
+												<div class="recom-box">
+													<div class="recom_info">
+														<p class="recom-logo"><img src="../image/smart/recom/recom_logo2.png" alt="라이나생명"></p>
+														<h4 class="recom-box-title"><strong>갱신형 암보험</strong></h
+															4>
+														<p class="recom-desc-text">첫 보험료가 저렴한 암보험</p>
+													</div>
+													<div class="recom_btn"><a href="javascript:void(0);"><strong>자세히<br>보기</strong></a></div>
+												</div>
+											</li>
+											<li>
+												<div class="recom-box">
+													<div class="recom_info">
+														<p class="recom-logo"><img src="../image/smart/recom/recom_logo3.png" alt="메리츠화재"></p>
+														<h4 class="recom-box-title"><strong>운전자보험</strong></h4>
+														<p class="recom-desc-text">자동차보험으로 보상되지 않는 비용 손해보상!</p>
+													</div>
+													<div class="recom_btn"><a href="javascript:void(0);"><strong>자세히<br>보기</strong></a></div>
+												</div>
+											</li>
+											<li>
+												<div class="recom-box">
+													<div class="recom_info">
+														<p class="recom-logo"><img src="../image/smart/recom/recom_logo4.png" alt="한화손해보험"></p>
+														<h4 class="recom-box-title"><strong>의료실비보험</strong></h4>
+														<p class="recom-desc-text">부담되는 병원비를 든든하게 보장!</p>
+													</div>
+													<div class="recom_btn"><a href="javascript:void(0);"><strong>자세히<br>보기</strong></a></div>
+												</div>
+											</li>
+											<li>
+												<div class="recom-box">
+													<div class="recom_info">
+														<p class="recom-logo"><img src="../image/smart/recom/recom_logo5.png" alt="수호천사동양생명"></p>
+														<h4 class="recom-box-title"><strong>정기·종신보험</strong></h
+															4>
+														<p class="recom-desc-text">가장의 사망을 책임지는 정기·종신보험</p>
+													</div>
+													<div class="recom_btn"><a href="javascript:void(0);"><strong>자세히<br>보기</strong></a></div>
+												</div>
+											</li>
+											<li>
+												<div class="recom-box">
+													<div class="recom_info">
+														<p class="recom-logo"><img src="../image/smart/recom/recom_logo6.png" alt="kb손해보험"></p>
+														<h4 class="recom-box-title"><strong>치아보험</strong></h
+															4>
+														<p class="recom-desc-text">치통보다 고액의 치과 치료비가 두렵다면?</p>
+													</div>
+													<div class="recom_btn"><a href="javascript:void(0);"><strong>자세히<br>보기</strong></a></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 스마트 가격비교 영역(끝) -->
+					</div>
+				</section>
+				<!-- 메인 인덱스 영역(끝)-->
+			</article>
+		</main>
+		<!-- 푸터 -->
+		<footer id="footer">
+		</footer>
+		<!-- 퀵매뉴 -->
+		<div id="quick">
+		</div>
+	</div>
+	<div class="opacity_wrap"></div>
+	<script type="text/javascript" src="../js/require.config.js"></script>
+	<script type="text/javascript" data-main="../js/pages/sub" src="../js/lib/require.js"></script>
+</body>
+</html>

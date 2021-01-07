@@ -1,0 +1,292 @@
+@charset 'utf-8';
+.pop-scroll { overflow-y:scroll; height:100%;
+scrollbar-face-color:#FFFFFF;
+scrollbar-highlight-color: #FFFFFF;
+scrollbar-3dlight-color: #FFFFFF;
+scrollbar-shadow-color: #FFFFFF;
+scrollbar-darkshadow-color: #FFFFFF;
+scrollbar-track-color: #FFFFFF;
+scrollbar-arrow-color: #FFFFFF
+}
+.pop-scroll::-webkit-scrollbar {width: 8px; height: 8px; border: 3px solid #fff; }
+.pop-scroll::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 10px; background:#fff}
+.pop-scroll::-webkit-scrollbar-track {background:#fff; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0)}
+.pop-scroll::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,0); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0)}
+
+
+.layer-pop-widget { display:none; position:fixed; left:0; top:0; z-index:100;
+	.pop-bg { position:fixed; left:0; top:0; z-index:100; width:100%; height:100%; background:rgba(0,0,0,0.5); }
+	.popup-widget { position:fixed; left:50%; top:50%; z-index:200; background-color:#fff; transform: translate(-50%, -50%); border:1px solid $borderColor-1; }
+	.popup-title { display:none; cursor:move; padding:10px; background-color:#222; color:#fff; }
+	.popup-icon {
+		img { margin:0 auto; }
+	}
+	//버튼 스타일
+	.ok-btn { display:block; margin:20px auto 0; @include btnStyle(100px, 30px, #222, #222); color:#fff; }
+	.close-btn { display:block; position:absolute; right:9px; top:9px; width:26px; height:26px; line-height:26px; text-align:center; font-size:$fSize-r; border:1px solid $borderColor-1;
+		&:hover { color:$baseColor; }
+	}
+}
+
+
+
+//팝업 폼
+#cs-form-pop-3,
+#cs-form-pop-2,
+#cs-form-pop-1 { width:400px; padding:40px 0;
+	.sub-form-inner { width:290px; margin:0 auto; }
+}
+
+#cs-form-pop-4 { width:500px; padding:40px 0;
+	.sub-form-inner { width:412px; margin:0 auto;
+		$form-width:330px;
+		.line-box { display:table; margin:15px 0 0 0; width:100%;
+			&:first-child { margin:0; }
+
+			.left-box { float:left; width:$form-width; }
+			.right-box { float:left; margin:0 0 0 20px; width:$form-width; }
+
+			.box-name { float:left; line-height:40px; color:$fColor-2; }
+			.box-info { float:right; }
+
+			&.line-check-1 {
+				.btn-check-type { overflow:hidden; width:75px; height:40px; margin:0 0 0 10px !important;
+					&:first-child { margin:0 !important;}
+				}
+			}
+
+			&.line-check-2 {
+				.btn-check-type { overflow:hidden; width:160px; height:40px; margin:0 0 0 10px !important;
+					&:first-child { margin:0 !important;}
+				}
+			}
+
+			.input-type-2 {width:$form-width; }
+			.box-info { width:$form-width; }
+			.text-p { margin:25px 0 0 0; }
+
+		}
+	}
+}
+
+//기타 텍스트 팝업
+#agr-pop,
+#etc-text-pop { width:1080px; padding:20px;
+	h3 { display:block; font-size:$fSize-b; text-align:center; }
+	.popup-text { margin:20px 0 0 0; padding:10px; background-color:#e9e9e9; }
+}
+
+//보험료 계산 결과
+#cal-result-pop { width:1080px; padding:50px 69px;
+	h3 { display:block; font-size:$fSize-b; text-align:center; }
+	.popup-contents { position:relative;
+		.popup-logo { position:absolute; left:-50px; top:-30px; }
+		.close-btn { right:-50px; top:-30px;}
+
+		.popup-top-desc,
+		.popup-mid-desc { text-align:center; }
+
+		.popup-top-desc { margin:28px 0 0 0;
+			.top-desc-p { font-size:$fSize-m; line-height:34px; }
+		}
+
+		.popup-mid-desc { margin:28px 0 0 0;
+			h4 { font-size:$fSize-r; line-height:24px; }
+			.mid-desc-p { font-size:$fSize-r; color:$fColor-2; line-height:24px; }
+		}
+
+		.popup-send-btn { margin:20px 0 0 0; text-align:center; font-size:0; letter-spacing:0; word-spacing:0;
+			button { display:inline-block; *display:inline; *zoom:1; }
+			.mail-send-btn { @include btnStyle(120px, 40px, $baseColor, $baseColor); color:#fff; font-size:$fSize; font-weight:bold;
+				&:hover { background-color:$baseColorHover; border-color:$baseColorHover; }
+			}
+			.cs-send-btn { margin:0 0 0 10px; @include btnStyle(120px, 40px, $baseColor2, $baseColor2); color:#fff; font-size:$fSize; font-weight:bold;
+				&:hover { background-color:$baseColorHover2; border-color:$baseColorHover2; }
+			}
+		}
+		.popup-result-list { margin:25px 0 0 0;
+			.subject { padding:0 0 0 30px;}
+		}
+
+		.popup-cs-desc { display:table; width:100%; margin:17px 0 0; padding:20px; background-color:#f2f4f7;
+			.popup-cs-btn,
+			.popup-cs-text,
+			.popup-cs-icon { float:left; display:inline; }
+
+
+			.popup-cs-icon { width:170px;
+				img { display:block; margin:0 auto;}
+			}
+
+			.popup-cs-text { margin:8px 0 0 0;
+				.cs-text-p { margin:7px 0 0 0; font-size:$fSize; color:$fColor-2;
+					&:first-child { margin:0; }
+					strong { font-size:$fSize-r; color:$fColor-1; }
+				}
+			}
+			.popup-cs-btn { float:right; @include btnStyle(150px, 50px, #18b3af, #18b3af); color:#fff; font-size:$fSize-r; font-weight:bold;
+				&:hover { background-color:#149996; border-color:#149996; }
+			}
+		}
+
+	}
+}
+
+//보험 직접가입 서비스
+#insu-service-pop { width:520px; padding:50px 40px;
+	h3 { display:block; margin:30px 0 0 0; font-size:$fSize-b; text-align:center; }
+	.popup-contents { position:relative;
+		.popup-logo { position:absolute; left:-50px; top:-30px; }
+
+		.popup-top-desc,
+		.popup-mid-desc { text-align:center; }
+
+		.popup-top-desc { margin:20px 0 0 0;
+			.top-desc-p { font-size:$fSize-r; line-height:20px; }
+		}
+
+		.popup-insu-box { margin:25px 0 0 0;
+			h4 { line-height:30px; color:#fff; text-align:center; }
+			.normal-title { background-color:$baseColor; }
+			.direct-title { background-color:$baseColor2; }
+			.insu-list { margin:10px 0 0;
+				ul { margin:-10px 0 0 -10px;
+					li { line-height:30px; padding:10px 0 0 10px;
+						a { display:block; text-align:center; border:1px solid $borderColor-1;
+						}
+					}
+				}
+			}
+		}
+		.popup-normal-insu ul li a:hover { color:$baseColor; }
+		.popup-direct-insu {
+			ul li a:hover { color:$baseColor2; }
+			margin:20px 0 0 0;
+		}
+
+	}
+}
+
+
+//보장내용확인팝업
+#insu-view-pop { width:600px; padding:30px;
+	.popup-contents {
+
+		h3 { margin:0 0 15px;
+			img { display:block; margin:0 auto; }
+		}
+
+		.popup-top-desc { margin:0 0 15px; text-align:center;
+			.top-desc-p { color:$fColor-2; font-size:$fSize-r; }
+		}
+
+		//테이블
+		.popup-view-info {
+			.popup-view-table {
+				thead { color:#fff;
+					th { padding:5px 10px; font-size:$fSize-r; }
+					.subject { background-color:#555; text-align:center; }
+					.description { background-color:$baseColor; text-align:center; }
+				}
+				tbody {
+					tr { border-bottom:1px solid $borderColor-2;}
+					td { padding:5px 10px; }
+					.subject {}
+					.description { background-color:#fff9d8; text-align:center; }
+				}
+			}
+		}
+
+	}
+}
+
+
+//메일 전송 완료창
+#write-s-pop,
+#write-out-pop,
+#cs-m-pop,
+#email-m-pop { width:320px; height:200px;
+	.popup-contents { padding:30px 0;
+		.popup-message { margin:20px 0 0; text-align:center; }
+	}
+}
+
+//팝업 비교 상담
+#insu-info-pop { width:360px; padding:50px 0;
+	h3 { display:block; font-size:$fSize-b; text-align:center; }
+	.popup-contents { text-align:center;
+		.popup-top-desc { margin:45px 0 0; line-height:20px; }
+		.popup-sns-btn { margin:25px 0 0;
+			button { display:block; width:200px; height:40px; line-height:40px; margin:0 auto; font-family:"Nanum Barun Gothic",sans-serif,tahoma,Dotum,AppleGothic,sans-serif; }
+			.icon { display:inline-block; width:24px; height:22px; margin:0 7px 0 0; vertical-align:middle; }
+			.kakao-icon { background:url($k-icon) no-repeat left top; }
+			.naver-icon { background:url($n-talk-icon) no-repeat left top; }
+			.kakao-send-btn { @include btnStyle(200px, 40px, #fce000, #fce000); color:#3c1e20; font-size:$fSize-r;}
+			.naver-send-btn { margin:20px auto 0; @include btnStyle(200px, 40px, #00c63b, #00c63b); color:#fff; font-size:$fSize-r; }
+		}
+	}
+}
+
+//팝업 위젯
+//안내 텍스트 팝업
+.layer-text { position:absolute; right:-245px; top:-8px; width:234px; height:56px;
+	.info-text-widget { position:relative;
+		&:before { position:absolute; left:-10px; top:50%; margin:-8px 0 0 0; content:''; width:12px; height:16px; background:url($i-layer-arrow) no-repeat left center; }
+	}
+	.info-layer-box { padding:10px 15px; background-color:#fff; border:1px solid $borderColor-1; font-size:$fSize; color:$baseColor;
+		p { line-height:18px; }
+	}
+}
+
+.layer-text2 { position:absolute; left:50%; top:-66px; width:234px; height:56px; margin:0 0 0 -117px;
+	.info-text-widget { position:relative;
+		&:before { position:absolute; left:50%; bottom:-10px; margin:0 0 0 -8px; content:''; width:16px; height:12px; background:url($i-layer-arrow-2) no-repeat left center; }
+	}
+	.info-layer-box { padding:10px 15px; background-color:#fff; border:1px solid $borderColor-1; font-size:$fSize; color:$baseColor2;
+		p { line-height:18px; }
+	}
+}
+
+//스마트 폼 박스1
+.pop-cs-form {
+	.sub-form-inner { overflow:hidden; }
+	h3 { text-align:center; font-size:$fSize-m;
+		.title-text {}
+	}
+	.comment-box { margin:20px 0 0 0;
+		.comment-p { text-align:center; font-size:$fSize-r; line-height:22px; }
+	}
+	.title-box { margin:25px 0 0;
+		h3 { font-size:$fSize-m; }
+		.cs-time { margin:5px 0 0; font-size:$fSize; text-align:center; }
+	}
+	.form-desc-box { margin:10px 0 0 0; text-align:center;
+		p { font-size:$fSize-r; line-height:24px; }
+	}
+	.sub-form-box { margin:25px 0 0 0;
+		.line-box { margin:15px 0 0 0; width:100%;
+			&:first-child { margin:0; }
+			.phone-input { float:left; display:inline; width:210px; border-right:0; }
+			.phone-btn { float:left; display:inline;  @include btnStyle(80px, 40px, #fff, #555); color:#fff; border:1px solid $borderColor-1; border-left:0; border-radius:0; }
+		}
+	}
+	.form-agree-box { overflow:hidden; padding:13px 0 0 0;
+		.agree-view {
+			float: right;
+			a {
+				display:block;
+				color: $baseColor;
+				line-height: 20px;
+				border-bottom:1px solid $baseColor;
+			}
+		}
+	}
+	.form-text-box { margin:10px 0 0 0;
+		p { text-align:center; font-size:$fSize-s; line-height:18px; color:$fColor-3;}
+	}
+	.form-btn-box { margin:25px 0 0 0;
+		button { display:block; font-size:$fSize-m; @include btnStyle(100%, 50px, #fff, $baseColor2); border-radius:5px;
+			&:hover { background-color:#3487d4; }
+		}
+	}
+}

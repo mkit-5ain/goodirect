@@ -1,0 +1,118 @@
+@charset 'utf-8';
+
+.smart-price-page {
+	.sub-visual-widget { overflow:hidden; height:750px; padding:40px 0 50px; background:url('../image/smart/smart_price_visual.jpg') no-repeat center top;
+		.sub-visual-inner { display:table; }
+	}
+	.sub-contents-wrap { padding:40px 0; background-color:#fff;
+		.widget-title { text-align:center; font-size:$fSize-b; }
+	}
+	//페이지 타이틀
+	.visual-title-wrap { padding:0 0 45px; border-bottom:2px solid $borderColor-4; text-align:center;
+		h2 { font-size:$fSize-b; }
+		.sub-title-desc { margin:10px 0 0; font-size:$fSize-r; color:$fColor-2; }
+	}
+
+	//비쥬얼 영역 코멘트
+	.visual-comment-wrap { margin:20px 0 50px 0; text-align:center; font-size:0; letter-spacing:0; word-spacing:0; zoom:1;
+		>* { display:inline-block; *display:inline; *zoom:1; vertical-align:middle; }
+		.comment-text { margin:0 15px 0 0; line-height:30px; font-size:$fSize-r; }
+		.na-btn { float:left; display:inline; border:1px solid $naver-color; @include btnStyle(100px, 30px, $naver-color, transparent);
+			strong { padding-left:20px; background:url($n-icon) no-repeat left center; font-size:$fSize-ba; }
+		}
+		.fb-btn { float:left; display:inline; margin:0 0 0 8px; border:1px solid $facebook-color; @include btnStyle(100px, 30px, $facebook-color, transparent);
+			strong { padding-left:15px; background:url($f-icon) no-repeat left center; font-size:$fSize-ba; }
+		}
+	}
+
+	//스마트 폼 박스1
+	.sub-form-widget { float:left; position:relative; width:418px; padding:0 19px 0 0;
+		.bg-arrow { position:absolute; top:50%; right:0; z-index:1; display:block; width:20px; height:26px; margin:-13px 0 0 0; background:url('../image/smart/smart_form_arrow.png') no-repeat left top; }
+		.sub-form-inner { overflow:hidden; padding:32px 55px; height:450px; background-color:#fff; border:1px solid $borderColor-1; }
+		h3 { text-align:center; font-size:$fSize-m;
+			.title-text { padding-left:25px; background:url($i-call) no-repeat left top; }
+		}
+		.form-desc-box { margin:10px 0 0 0; text-align:center;
+			p { font-size:$fSize-r; line-height:24px; }
+		}
+		.sub-form-box { margin:14px 0 0 0;
+			.line-box { margin:15px 0 0 0; width:100%;
+				&:first-child { margin:0; }
+				.phone-input { float:left; display:inline; width:215px; border-right:0; }
+				.phone-btn { float:left; display:inline;  @include btnStyle(72px, 40px, #fff, #555); color:#fff; border:1px solid $borderColor-1; border-left:0; border-radius:0; }
+			}
+		}
+		.form-agree-box { overflow:hidden; padding:13px 0 0 0;
+			.agree-view {
+				float: right;
+				a {
+					display:block;
+					color: $baseColor;
+					line-height: 20px;
+					border-bottom:1px solid $baseColor;
+				}
+			}
+		}
+		.form-text-box { margin:10px 0 0 0;
+			p { text-align:center; font-size:$fSize-s; line-height:18px; color:$fColor-3;}
+		}
+		.form-btn-box { margin:10px 0 0 0;
+			button { display:block; font-size:$fSize-m; @include btnStyle(100%, 50px, #fff, $baseColor2); border-radius:5px;
+				&:hover { background-color:#3487d4; }
+			}
+		}
+	}
+
+	//스마트 폼 박스2
+	.sub-form-widget2 { float:left; position:relative; width:670px; margin:0 0 0 -10px;
+		.sub-form-inner { overflow:hidden; height:450px; padding:35px 90px; background-color:#fff; border:1px solid $borderColor-1; }
+		h3 { text-align:center; font-size:$fSize-m;
+			.title-text { display:inline-block; padding-left:50px; line-height:31px; background:url($i-coin) no-repeat left top; }
+		}
+		.form-desc-box { margin:13px 0 0 0; text-align:center;
+			p { font-size:$fSize-r; line-height:24px; }
+		}
+		.sub-form-box { margin:35px 0 0 0;
+			.line-box { display:table; clear:both; width:100%; margin:20px 0 0 0; width:100%;
+				.input-text { float:left; width:110px;
+					strong { display:block; font-size:$fSize-r; line-height:30px; }
+				}
+				.input-box { float:left; height:30px; border-bottom:2px solid $borderColor-6; @include boxSizing;
+					.price-text { line-height:30px; }
+				}
+				.box-btn { float:right;
+					button { display:block; @include btnStyle(110px, 30px, #fff, #fff); border:1px solid $borderColor-3; color:$fColor-2;
+						&:hover { border-color:$baseColor2; color:$baseColor2; }
+					}
+				}
+				&:first-child { margin:0; }
+			}
+		}
+	}
+
+
+
+	//추천 보험
+	.sub-recom-widget {
+		.recom-widget-inner { margin:40px 0 0 0;
+			ul { margin:-15px 0 0 -15px; width:1095px;
+				li { float:left; padding:15px 0 0 15px; }
+				.recom-box { border:1px solid $borderColor-2; padding:30px 0; height:290px;
+					h4 { text-align:center; font-size:$fSize-m; }
+					.recom-desc-text { margin:10px 0 0 0; text-align:center; }
+					.recom-info { margin:30px 0 0 0;
+						p { text-align:center;
+							img { display:block; margin:0 auto; }
+						}
+						.recom-logo { margin:20px 0 0 0; }
+						.recom-btn { margin:20px 0 0 0;
+							a { display:block; margin:0 auto;  @include btnStyle(100px, 30px, #fff, #222); color:#fff;
+								&:hover { background-color:#474747; }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

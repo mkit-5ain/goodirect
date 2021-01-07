@@ -1,0 +1,91 @@
+@charset 'utf-8';
+.board-widget-wrap { overflow:hidden; padding:40px 0 60px; background-color:#fff; }
+
+
+.faq-list-widget {
+	.tab-nav-widget {
+		ul {
+			li {
+				a { display:block; line-height:50px; text-align:center; font-weight:bold; color:$fColor-2; border:1px solid $borderColor-2; @include boxSizing; }
+				&:first-child {
+					a { border-right:0; }
+				}
+			}
+			.active {
+				a { color:#fff; background-color:$baseColor2; }
+			}
+		}
+	}
+	.tab-contents-widget { margin:30px 0 0; }
+}
+
+//리스트 아코디언 타입
+.board-list-toggle { border-top:2px solid $borderColor-4;
+	.board-list-inner {
+		.board-box { border-bottom:1px solid $borderColor-1;
+			.board-subject-box {
+				a { display:table; width:100%; padding:15px 30px; line-height:24px;
+					//내용
+					.subject { float:left; font-size:$fSize-r; }
+					.arrow { float:right; width:24px; height:24px; background:url($i-b-t-arrow) no-repeat left top; }
+					&.active { color:$baseColor2;
+						.arrow { background-image:url($i-b-t-arrow-on); }
+					}
+				}
+			}
+			.board-desc-box { padding:30px 50px; background-color:#f2f4f7; color:$fColor-2; font-size:$fSize-r; line-height:24px; }
+		}
+	}
+	.paging-widget { margin:30px 0 0 0; }
+}
+
+
+//문의 게시판
+.board-list-widget {
+	//테이블 스타일 변경
+	.qa-table-widget {
+		thead { border-top:1px solid $borderColor-7; }
+	}
+}
+
+//게시판 검색
+.board-search-widget { padding:13px 0 15px; border-top:2px solid $borderColor-4;
+	.board-select-box {
+		.board-select { margin:0 0 0 20px;
+			&:first-child { margin:0; }
+		}
+		.date-select { width:240px; }
+		.subject-select { width:200px; }
+	}
+	.board-input-box { float:right; margin:0 0 0 20px;
+		.board-search-btn { margin:0 0 0 10px; @include btnStyle(120px, 30px, #555, #555); color:#fff; font-weight:bold;
+			&:hover { background-color:#474747; }
+		}
+	}
+}
+
+//페이징,문의버튼
+.board-bottom-widget { position:relative;
+	.paging-widget { margin:30px 0 0 0; }
+	.list-btn-box { position:absolute; right:0; top:-5px;
+		.write-btn { display:inline-block; @include btnStyle(120px, 40px, #222, #222); color:#fff; font-weight:bold;
+			&:hover { background-color:$baseColor; border-color:$baseColor; }
+		}
+	}
+}
+
+//버튼 스타일
+.board-btn-widget { margin:20px 0 0;
+	ul { text-align:center; font-size:0; letter-spacing:0; word-spacing:0;
+		li { display:inline-block; *display:inline; *zoom:1;
+			a { display:block; font-size:$fSize; }
+			&:nth-child(2) { margin:0 0 0 10px; }
+			.list-move { @include btnStyle(120px, 40px, #555, #555); color:#fff; font-weight:bold;
+				&:hover { background-color:$baseColor2; border-color:$baseColor2; }
+			}
+			.write-btn { @include btnStyle(120px, 40px, $baseColor2, $baseColor2); color:#fff; font-weight:bold;
+				&:hover { background-color:#216bae; border-color:#216bae; }
+			}
+		}
+	}
+}

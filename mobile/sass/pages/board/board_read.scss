@@ -1,0 +1,66 @@
+@charset 'utf-8';
+//게시판 뷰 페이지
+.board-read-widget {background:#fff;
+	.board_read_inner{ background: #fff; margin: 0 4%; border-top: 2px solid #222;
+		.read-desc-box { padding:10px 2%; background-color:#f2f4f7;
+			.subject { font-size:$fSize-r;
+				.read_pro{float: right; width: 50px; height: 24px; line-height: 24px; background: #3e95e5; color: #fff; text-align: center; border-radius: 4px; font-size:12px;}
+				strong{font-size:14px;}
+			}
+			.subject-icon { margin:0 10px 0 0; }
+			.desc-info {margin-top:10px; font-size:12px;
+				.desc-span { color:$fColor-2;
+					.date{background: url(../image/icon/i_line.jpg) 10px 0 no-repeat; background-size: 1px 15px; padding-left:20px;}
+				}
+			}
+		}
+		.read-contents-box { padding:20px 0px; }
+	}
+}
+
+// 상담카드
+.cs-writer-widget { display:table; width:100%; background:#fff; padding-bottom:20px;
+	.cs-card-box { width:92%; padding:20px 4%; display:table; border:1px solid $borderColor-2; margin:0 4%; padding-left:0;
+		.card-logo { width:30%; display:inline-block; vertical-align:middle;
+			img { display:block; margin:0 auto; width:70px;}
+		}
+		.card-desc-box { width: 70%; vertical-align: middle; display: inline-block;
+			h3 { padding:0 0 8px; font-size:$fSize-ba; line-height:30px; border-bottom:1px solid $borderColor-7;
+				.name { font-size:$fSize-ba; }
+			}
+			.card-info {
+				.info-title { margin:8px 0 0; color:$baseColor; font-size:$fSize-s; }
+				.info-desc { margin:3px 0 0; font-size:$fSize-s; }
+			}
+		}
+	}
+}
+.cs-form-box {background:#fff; clear:both; margin:10px 0px; padding:10px 0px;
+	.cs_inner_form{margin:0 4%;
+		h3 {text-align:center;
+			span{color:$baseColor;}
+		}
+		.form-box-inner { display:table; width:100%; margin:10px 0 0; }
+		.form-left {
+			.line-box { display:table; width:100%; margin:10px 0 0 0;
+				&:first-child { margin:0; }
+				.input-type-2 {}
+				.form-agree-box { clear:both; overflow:hidden;
+					.agree-view {float:left; margin-left:10px;
+						a {
+							display:block;
+							color: $baseColor;
+							line-height: 20px;
+							border-bottom:1px solid $baseColor;
+						}
+					}
+				}
+			}
+		}
+		.form-btn {margin-top:10px;
+			button { display:block; @include btnStyle(100%, 40px, #18b3af, #18b3af); color:#fff; line-height:40px; font-size:$fSize-r; font-weight:bold;
+				&:hover { background-color:#16a29e; }
+			}
+		}
+	}
+}

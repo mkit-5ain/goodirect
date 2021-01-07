@@ -1,0 +1,69 @@
+@charset 'utf-8';
+// notoSans
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*
+ * Nanum Square Web Fonts
+ * https://github.com/hiun/NanumSquare
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com)
+ */
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/NanumSquareR.eot');
+  src: local('Nanum Square Regular'),
+       local('NanumSquareR'),
+       url('../fonts/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NanumSquareR.woff2') format('woff2'),
+       url('../fonts/NanumSquareR.woff') format('woff'),
+       url('../fonts/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../fonts/NanumSquareB.eot');
+  src: local('Nanum Square Bold'),
+       local('NanumSquareB'),
+       url('../fonts/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NanumSquareB.woff2') format('woff2'),
+       url('../fonts/NanumSquareB.woff') format('woff'),
+       url('../fonts/NanumSquareB.ttf') format('truetype');
+}
+/*
+ * Nanum Barun Gothic (Korean) http://hangeul.naver.com
+ */
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Nanum Barun Gothic UltraLight'), local('Nanum Barun Gothic-UltraLight'), local('NanumBarunGothic UltraLight');
+  src: url('../fonts/NanumBarunGothicUltraLight.eot');
+  src: url('../fonts/NanumBarunGothicUltraLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NanumBarunGothicUltraLight.woff2') format('woff2'),
+       url('../fonts/NanumBarunGothicUltraLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nanum Barun Gothic Light'), local('Nanum Barun Gothic-Light'), local('NanumBarunGothic Light');
+  src: url('../fonts/NanumBarunGothicLight.eot');
+  src: url('../fonts/NanumBarunGothicLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NanumBarunGothicLight.woff2') format('woff2'),
+       url('../fonts/NanumBarunGothicLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+  src: url('../fonts/NanumBarunGothic.eot');
+  src: url('../fonts/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NanumBarunGothic.woff2') format('woff2'),
+       url('../fonts/NanumBarunGothic.woff') format('woff');
+}

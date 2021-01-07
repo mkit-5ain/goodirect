@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+.goodtip-widget-wrap { overflow:hidden; padding:40px 0 60px; background-color:#fff;
+	.sub-visual-widget { padding:0 0 25px; border-bottom:1px solid $borderColor-1; }
+}
+
+
+//굿팁 카테고리 리스트
+.category-list-widget { margin:25px 0 0;
+	.list-title { text-align:center;
+		h3 { display:inline-block; *display:inline; *zoom:1; font-size:$fSize-m; }
+		.list-count { display:inline-block; *display:inline; *zoom:1; font-size:$fSize-r; }
+	}
+
+
+	.cate-list-wrap { margin:25px 0 0;
+		ul { margin:-30px 0 0 -15px;
+			li { padding:30px 0 0 15px;
+				.list-box {
+					.list-img {
+						a{ display:block; overflow:hidden;
+							img { display:block; width:100%; }
+						}
+					}
+					.list-info-box { margin:10px 0 0;
+						.list-subject {
+							a { display:block; font-size:$fSize-r;
+								&:hover { text-decoration:underline; color:$baseColor2; }
+							}
+						}
+						.list-view { margin:5px 0 0; color:$fColor-3; }
+					}
+				}
+			}
+		}
+	}
+
+	.paging-widget { margin:50px 0 0; }
+
+}

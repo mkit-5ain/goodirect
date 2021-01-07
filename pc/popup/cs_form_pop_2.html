@@ -1,0 +1,63 @@
+<div class="layer-pop-widget">
+	<div class="pop-bg" onclick="layerClose(this ,false);"></div>
+	<div class="popup-widget" id="cs-form-pop-2">
+		<h3 class="popup-title">팝업타이틀</h3>
+		<div class="popup-contents">
+			<p class="popup-icon"><img src="../image/popup/cs_icon.png" alt="무료 상담 신청"></p>
+			<div class="pop-cs-form">
+				<span class="bg-arrow"></span>
+				<form method="get" accept-charset="utf-8" onsubmit="return false;">
+					<fieldset>
+						<div class="sub-form-inner">
+							<div class="comment-box">
+								<p class="comment-p point"><strong>나에게 맞는 보험은 무엇일까요?</strong></p>
+								<p class="comment-p"><strong>전문 상담원이 쉽게 상담해 드리겠습니다.</strong></p>
+							</div>
+							<div class="title-box">
+								<h3><strong class="title-text">빠른 전화상담</strong> <span class="point"><strong>1688-0889</strong></span></h3>
+								<p class="cs-time">(평일 오전9시~오후6시까지, 토/일/공휴일 휴무)</p>
+							</div>
+							<div class="sub-form-box">
+								<div class="line-box">
+									<input type="text" value="" placeholder="이름" class="input-type-1">
+								</div>
+								<div class="line-box d-Table">
+									<input type="number" value="" placeholder="생년월일(예:19900505)" maxlength="8" class="input-type-2">
+									<div class="btn-check-box">
+										<div class="input-block btn-check-type">
+											<input id="p2-type1" type="radio" name="type" checked="">
+											<label for="p2-type1" class="label-custom">남</label>
+										</div>
+										<div class="input-block btn-check-type">
+											<input id="p2-type2" type="radio" name="type">
+											<label for="p2-type2" class="label-custom">여</label>
+										</div>
+									</div>
+								</div>
+								<div class="line-box d-Table">
+									<input type="number" value="" placeholder="전화번호 ('-'없이 숫자만 입력)" maxlength="11" class="input-type-1 phone-input">
+									<button type="button" class="phone-btn">인증하기</button>
+								</div>
+								<div class="line-box d-Table">
+									<input type="number" value="" placeholder="인증번호 입력 (숫자5자리)" maxlength="5" class="input-type-1 phone-input">
+									<button type="button" class="phone-btn">인증완료</button>
+								</div>
+							</div>
+							<div class="form-agree-box">
+								<div class="input-block custom-checkbox">
+									<input id="p2-agree" type="checkbox">
+									<label for="p2-agree" class="agree-check">개인정보 수집 및 이용동의</label>
+								</div>
+								<p class="agree-view"><a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/agr_pop');" class="agree-layer-open">자세히보기</a></p>
+							</div>
+							<p class="form-btn-box">
+								<button type="submit"><strong>즉시 상담 신청</strong></button>
+							</p>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<p class="popup-btn"><button type="button" id="close-btn" class="close-btn">X</button></p>
+		</div>
+	</div>
+</div>

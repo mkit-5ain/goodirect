@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+//게시판 글쓰기 폼
+.board-write-widget { padding:40px 0; border-top:2px solid $borderColor-4; border-bottom:2px solid $borderColor-4;
+	.board-write-inner { width:535px; margin:0 auto;
+		.write-box { display:table; width:100%; margin:20px 0 0;
+			&:first-child { margin:0;}
+			.box-name { float:left; display:inline; line-height:40px; }
+			.box-info { float:right; width:450px; display:inline;
+				.form-left { float:left; }
+				.form-right { float:right; }
+				.email-input { width:180px; }
+				.email-gap { padding:0 0 0 13px; font-size:$fSize-r; }
+				.email-select { width:230px; }
+				.text-comment { clear:both; margin:10px 0 0; color:$fColor-3; }
+			}
+		}
+	}
+}
+

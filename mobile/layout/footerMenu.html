@@ -1,0 +1,55 @@
+<div class="fixed-input-inner">
+	<a href="" class="fixed-input-toggle fixed-input-toggle-wrap">
+		<span></span>
+		<span>상담신청</span>
+	</a>
+	<!-- 입력 폼 시작 -->
+	<div class="main-form-widget">
+		<form method="get" accept-charset="utf-8" onsubmit="return false;">
+			<fieldset>
+				<div class="main-form-inner">
+					<h3>
+						<p><strong>나에게 맞는 보험은 무엇일까요?</strong></p>
+						<p><span class="point"><strong>전문 상담원이 쉽게 상담해 드리겠습니다.</strong></span></p>
+					</h3>
+					<div class="main-form-box">
+						<div class="line-box">
+							<input type="text" value="" placeholder="이름" class="input-type-1">
+						</div>
+						<div class="line-box d-Table">
+							<div class="input_wrap">
+								<div class="input_inner_wrap">
+									<input type="number" value="" placeholder="생년월일(예:19900505)" maxlength="8" class="input-type-2">
+								</div>
+							</div>
+							<div class="btn-check-box">
+								<div class="input-block btn-check-type">
+									<input id="ft_type1" type="radio" name="type" checked>
+									<label for="ft_type1" class="label-custom">남</label>
+								</div>
+								<div class="input-block btn-check-type">
+									<input id="ft_type2" type="radio" name="type">
+									<label for="ft_type2" class="label-custom">여</label>
+								</div>
+							</div>
+						</div>
+						<div class="line-box">
+							<input type="number" value="" placeholder="전화번호 ('-'없이 숫자만 입력')" maxlength="11" class="input-type-1">
+						</div>
+					</div>
+					<div class="form-agree-box">
+						<div class="input-block custom-checkbox">
+							<input id="menu-agree" type="checkbox">
+							<label for="menu-agree" class="agree-check">개인정보 수집 및 이용동의</label>
+						</div>
+						<p class="agree-view"><a href="javascript:void(0);" onclick="popupActions(this,'layer-pop-widget','popup','../popup/agr_pop');" class="agree-layer-open">자세히보기</a></p>
+					</div>
+					<p class="form-btn-box">
+						<button type="submit"><strong>즉시 상담 신청</strong></button>
+					</p>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<!-- 입력 폼 끝 -->
+</div>

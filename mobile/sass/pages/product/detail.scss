@@ -1,0 +1,77 @@
+@charset 'utf-8';
+
+.detail-widget-wrap {background-color:#fff;
+	.layer-text { top:12px; }
+}
+
+
+.detail-top-widget {display:table; width:100%;
+	.info-btn { display:inline-block; *display:inline; *zoom:1; margin:0 0 0 5px; width:20px; height:20px; line-height:20px; text-align:center; font-size:$fSize-r; color:#fff; background-color:#555; border-radius:10px;}
+}
+.detail-pr-desc-widget { margin:25px 0 0; padding:25px 60px 0; border-top:1px solid $borderColor-1;
+	.pr-desc-box { display:table; width:100%;
+		.pr-desc-info { float:left; display:inline; margin:0 0 0 70px;
+			&:first-child { margin:0; }
+			.info-name { color:$fColor-2; }
+			.info-desc { margin:5px 0 0; color:$fColor-2;
+				.point { font-size:$fSize-m; }
+				.ms-text { color:$fColor-3; }
+			}
+		}
+	}
+}
+.detail-tab-widget {
+	.ft_tab_widget {
+		ul {
+			li {
+				a { display:block; line-height:50px; text-align:center; font-weight:bold; color:$fColor-2; border:1px solid $borderColor-2; @include boxSizing; }
+				&:first-child {
+					a { border-right:0; }
+				}
+			}
+			.active {
+				a { color:#fff; background-color:$baseColor2; }
+			}
+		}
+	}
+	.basic-tab-contents {
+		.widget-title { display:table; width:100%; margin:0 0 10px;
+			h3 { float:left; font-size:$fSize-m; line-height:30px; }
+			.board-btn { float:right;
+				a { float:left; display:inline; color:#fff; font-weight:bold; }
+				.write-btn { @include btnStyle(100px, 30px, #fff, #222);
+					&:hover { background-color:#000; }
+				}
+				.all-btn { margin:0 0 0 9px; @include btnStyle(100px, 30px, #fff, #555);
+					&:hover { background-color:#414141; }
+				}
+			}
+		}
+		.paging-widget { margin:20px 0 40px;}
+	}
+	.qa-table-widget {
+		.writer {
+			span { display:block; }
+		}
+		.qa-writer { margin:10px 0 0 0;
+			span { display:inline-block; padding:4px 5px; background-color:#999; color:#fff; border-radius:2px; }
+		}
+		.subject { padding:10px 0 10px 50px; line-height:24px;
+			.subject-link { display:block; color:$fColor-1; }
+			.subject-icon { display:inline-block; *display:inline; *zoom:1; width:24px; height:24px; line-height:24px; text-align:center; border-radius:12px; color:#fff; }
+			.q-icon { background-color:#555; }
+			.a-icon { background-color:#ff7e00; }
+			.subject-text { margin:0 0 0 10px; }
+		}
+		.a-subject { margin:10px 0 0 0;
+			.subject-text { color:$fColor-2; }
+		}
+	}
+}
+// 자동차 보험 리스트
+.detail_direct{padding:0px!important;
+	.list-product-wrap{padding:0px!important;
+		.list-box{border-bottom:0px!important;}
+	}
+	.list-btn-1{background-color:#fff!important; border:1px solid #3e95e5!important; color:#3e95e5!important; border-radius:0px!important;}
+}

@@ -1,0 +1,28 @@
+//box
+$container-width: 940px;
+
+//font
+// 1 3 4 5 7 9
+$base-font: 'Noto Sans KR', sans-serif;
+
+//color
+$brand-color: #2d363f !default;
+$accent-color: #ff9c00 !default;
+$border-color: #ccc;
+
+//type-color
+$type-a-color: $accent-color!important;
+$type-b-color: #e95d09!important;
+$type-c-color: #ff7e00!important;
+$type-d-color: #89959f!important;
+$type-e-color: #39444e!important;
+
+//main top banner color
+$main-banner-bg: $brand-color;
+
+@mixin spritebox($left, $top, $height, $width) {
+  background-repeat: no-repeat;
+  background-position: $left $top;
+  height: $height;
+  width: $width;
+}

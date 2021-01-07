@@ -1,0 +1,114 @@
+@charset 'utf-8';
+.board-widget-wrap { overflow:hidden;}
+
+
+.faq-list-widget {background:#fff;
+	.ft_tab_widget {
+		ul {
+			li {
+				a { display:block; line-height:50px; text-align:center; font-weight:bold; color:$fColor-3; border:1px solid $borderColor-7; @include boxSizing; }
+				&:first-child {
+					a { border-right:0; }
+				}
+			}
+			.active {
+				a { color:#fff; background-color:$baseColor2; }
+			}
+		}
+	}
+	.tab-contents-widget { margin:20px 4%; }
+}
+
+//리스트 아코디언 타입
+.board-list-toggle { border-top:2px solid $borderColor-4;
+	.board-list-inner {
+		.board-box { border-bottom:1px solid $borderColor-1;
+			.board-subject-box {
+				a { display:table; width:100%; padding:10px 0; line-height:24px;
+					//내용
+					.subject { float:left; font-size:$fSize-ba; }
+					.arrow { float:right; width:18px; height:10px; background:url($i-b-t-arrow) no-repeat left top; background-size:18px; margin:7px 0px;}
+					&.active {
+						.arrow { background-image:url($i-b-t-arrow-on); }
+					}
+				}
+			}
+			.board-desc-box { padding:10px; background-color:#f2f4f7; color:$fColor-2; font-size:$fSize-ba; line-height:24px; }
+		}
+	}
+	.paging-widget { margin:15px 0 0 0; }
+}
+
+// 상품 아코디언 타입
+.list_direct_toggle{
+	.board-box{border-bottom:1px solid #999!important;
+		.board-desc-box{background-color:#fff!important; border-top:1px solid #999; padding:10px;
+			div{width:49%; display:inline-block; font-size:$fSize-s; line-height:24px;}
+		}
+		.board-subject-box{
+			a{width:92%!important; margin:0 4%;
+				.arrow{background: url(../image/icon/pro_icon_off.png) no-repeat left top!important; background-size: 15px!important; height: 15px!important; width: 15px!important;}
+				&.active{
+					.arrow{background-image: url(../image/icon/pro_icon_on.png)!important; background-size: 15px!important; height: 15px!important; width: 15px}
+				}
+			}
+		}
+	}
+}
+
+
+//문의 게시판
+.board-list-widget {padding:0 4%; background:#fff;
+	//테이블 스타일 변경
+	.qa-table-widget {
+		.qa_table_inner{border:1px solid $borderColor-7; margin-top:15px;
+			.qa_title{width:100%; display:table; padding:10px 2%; border-bottom:1px solid $borderColor-1;
+				.writer{float:right;
+					span{display:inline-block; padding-left:20px; background:url(../image/icon/i_line.jpg) 10px 0 no-repeat; background-size:1px 15px;}
+				}
+				.title{float:left;}
+			}
+			.subject{padding:10px 2%;}
+		}
+	}
+}
+
+//게시판 검색
+.board-search-widget { position:relative; padding-top:15px; border-top:2px solid $borderColor-4;
+	.board-select-box {
+		.board-select { margin:0 0 0 20px;
+			&:first-child { margin:0; }
+		}
+		.date-select { width:240px; }
+		.subject-select { width:200px; }
+	}
+	.board-input-box {width:100%; padding-right:90px;
+		input{width: 100%; height: 30px;}
+		.board-search-btn {@include btnStyle(90px, 30px, #555, #555); color:#fff; font-weight:bold; border-radius:0px; position:absolute; top:15px; right:0px; z-index:10;}
+	}
+}
+
+//페이징,문의버튼
+.board-bottom-widget { position:relative; padding-bottom:15px;
+	.list-btn-box {
+		.write-btn { display:inline-block; @include btnStyle(100%, 40px, #222, #222); color:$baseColor; font-weight:bold; background:none; border-radius:0px; border:1px solid $baseColor;
+		}
+		.all-btn { display:inline-block; @include btnStyle(100%, 40px, #222, #222); color:#222; font-weight:bold; background:none; border-radius:0px; border:1px solid #222;
+		}
+	}
+	.paging-widget{padding:15px 0px;}
+}
+
+//버튼 스타일
+.board-btn-widget { margin:20px 0 0;
+	ul { text-align:center; font-size:0; letter-spacing:0; word-spacing:0;
+		li { display:inline-block; *display:inline; *zoom:1;
+			a { display:block; font-size:$fSize; }
+			&:nth-child(2) { margin:0 0 0 10px; }
+			.list-move { @include btnStyle(120px, 40px, #555, #555); color:#fff; font-weight:bold;
+			}
+			.write-btn { @include btnStyle(120px, 40px, $baseColor2, $baseColor2); color:#fff; font-weight:bold;
+			}
+		}
+	}
+}

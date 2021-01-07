@@ -1,0 +1,57 @@
+@charset 'utf-8';
+//게시판 뷰 페이지
+.board-read-widget { border-top:2px solid $borderColor-4; border-bottom:1px solid $borderColor-7;
+	.read-desc-box { padding:10px 20px 10px 10px; background-color:#f2f4f7;
+		.subject { font-size:$fSize-r; }
+		.subject-icon { margin:0 10px 0 0; }
+		.desc-info { padding:5px 0 0 35px;
+			.desc-span { color:$fColor-2; margin:0 30px 0 0; }
+		}
+	}
+	.read-contents-box { padding:20px 45px; }
+}
+
+// 상담카드
+.cs-writer-widget { display:table; width:100%; margin:90px 0 0; padding:15px 0; border:1px solid $borderColor-2;
+	.cs-card-box { float:left; width:50%; padding:20px 20px 20px 0; border-right:1px dashed $borderColor-2;
+		.card-logo { float:left; width:208px; margin:20px 0;
+			img { display:block; margin:0 auto; }
+		}
+		.card-desc-box { float:right; width:300px;
+			h3 { padding:0 0 8px; font-size:$fSize-m; line-height:30px; border-bottom:1px solid $borderColor-7;
+				.name { font-size:$fSize-b; }
+			}
+			.card-info {
+				.info-title { margin:8px 0 0; color:$baseColor; font-size:$fSize-s; }
+				.info-desc { margin:3px 0 0; font-size:$fSize-r; }
+			}
+		}
+	}
+	.cs-form-box { float:right; width:50%; padding:9px 20px;
+		h3 {
+			.icon { float:left; margin:0 5px 0 0; }
+		}
+		.form-box-inner { display:table; width:100%; margin:10px 0 0; }
+		.form-left { float:left; width:330px;
+			.line-box { display:table; width:100%; margin:10px 0 0 0;
+				&:first-child { margin:0; }
+				.input-type-2 { width:240px; }
+				.form-agree-box { clear:both; width:265px; overflow:hidden;
+					.agree-view {float:right;
+						a {
+							display:block;
+							color: $baseColor;
+							line-height: 20px;
+							border-bottom:1px solid $baseColor;
+						}
+					}
+				}
+			}
+		}
+		.form-btn { float:right;
+			button { display:block; @include btnStyle(150px, 140px, #18b3af, #18b3af); color:#fff; line-height:20px; font-size:$fSize-r; font-weight:bold;
+				&:hover { background-color:#16a29e; }
+			}
+		}
+	}
+}

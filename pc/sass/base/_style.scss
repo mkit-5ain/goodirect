@@ -1,0 +1,509 @@
+@charset 'utf-8';
+//guide
+$maxSize: 1080px;
+$NnBa:'Nanum Barun Gothic', sans-serif;
+$NnSq:'Nanum Square', sans-serif;
+
+//baseColor
+$baseColor:#ff7e00;
+$baseColor2:#3e95e5;
+$baseColorHover:#eb7400;
+$baseColorHover2:#3a88cf;
+$borderColor-1:#dcdcdc;
+$borderColor-2:#bbb;
+$borderColor-3:#555;
+$borderColor-4:#222;
+$borderColor-5:#e5e5e5;
+$borderColor-6:#ff7e00;
+$borderColor-7:#999;
+$bgColor-1:#f2f4f7;
+//fontStyle
+$fSize:14px;
+$fColor-1:#222;
+$fColor-2:#555;
+$fColor-3:#999;
+
+$fSize-s:12px;
+$fSize-ba:14px;
+$fSize-r:16px;
+$fSize-m:20px;
+$fSize-b:30px;
+$fSize-x:50px;
+
+//sns color
+$naver-color:#00c63b;
+$facebook-color:#3a589e;
+
+//icons
+$i-bar:'../image/icon/i_nbar.png';
+$i-barHover:'../image/icon/i_nbar_hover2.png';
+$i-barOn:'../image/icon/i_nbar_over2.png';
+$i-keyword:'../image/icon/i_key.png';
+
+
+$i-prev-arrow:'../image/icon/i_prev_arrow.png';
+$i-next-arrow:'../image/icon/i_next_arrow.png';
+$i-m-prev-arrow:'../image/icon/i_m_prev_arrow.png';
+$i-m-next-arrow:'../image/icon/i_m_next_arrow.png';
+$i-m-prev-arrow-on:'../image/icon/i_m_prev_arrow_on.png';
+$i-m-next-arrow-on:'../image/icon/i_m_next_arrow_on.png';
+$i-tab-arrow-on:'../image/icon/tab_on_arrow.png';
+$i-sum-arrow:'../image/icon/sum_title_arrow.png';
+$i-layer-arrow:'../image/icon/layer_pop_arrow.png';
+$i-layer-arrow-2:'../image/icon/layer_pop_arrow-2.png';
+$i-b-t-arrow:'../image/icon/list_arrow.png';
+$i-b-t-arrow-on:'../image/icon/list_arrow_on.png';
+
+$i-circle:'../image/icon/i_circle.png';
+$i-circle-on:'../image/icon/i_circle_on.png';
+$i-select-1:'../image/icon/i_select_1.gif';
+$i-select-2:'../image/icon/i_select_2.gif';
+$i-select-3:'../image/icon/i_select_3.gif';
+$i-checkbox:'../image/icon/i_checkbox.gif';
+$i-radio:'../image/icon/i_radio.gif';
+$i-call:'../image/icon/i_call_icon.png';
+$i-call-big:'../image/icon/i_call_big.png';
+$i-call-big-2:'../image/icon/i_call_big2.png';
+$i-coin:'../image/icon/i_coin.png';
+$i-coin-white:'../image/icon/i_coin_white.png';
+
+
+$n-icon:'../image/icon/n_icon.png';
+$n-icon-hover:"../image/icon/n_icon_hover.png";
+$f-icon:'../image/icon/f_icon.png';
+$f-icon-hover:"../image/icon/f_icon_hover.png";
+$k-icon:'../image/icon/kakao_icon.png';
+$n-talk-icon:'../image/icon/talktalk_icon.png';
+
+//Add Mixin
+
+//Actions Mixin
+@mixin cssTransition($timer) {
+	transition:$timer;
+	-webkit-transition:$timer;
+	-moz-transition:$timer;
+	-o-transition:$timer;
+	-ms-transition:$timer;
+}
+
+//btnStyle
+@mixin btnStyle($width, $height, $color, $bg-color) {
+	width:$width;
+	height:$height;
+	border:1px solid $color;
+	border-radius:4px;
+	color:$color;
+	text-align:center;
+	line-height:$height;
+	background-color:$bg-color;
+}
+
+@mixin boxSizing() {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+//opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+    filter:alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin hoverZoom($timer) {
+	transition: all $timer ease-out;
+	-webkit-transition: all $timer ease-out;
+	-moz-transition: all $timer ease-out;
+	-o-transition: all $timer ease-out;
+	-ms-transition: all $timer ease-out;
+}
+
+@mixin scaleZoom($zoom1,$zoom2) {
+	transform: scale($zoom1, $zoom2);
+	-webkit-transform: scale($zoom1, $zoom2);
+	-moz-transform: scale($zoom1, $zoom2);
+	-ms-transform: scale($zoom1, $zoom2);
+	-o-transform: scale($zoom1, $zoom2);
+}
+
+@mixin textOverflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+//페이지 타이틀
+.visual-title-wrap { padding:0 0 45px; text-align:center;
+	h2 { font-size:$fSize-b;
+		img { margin:0 auto; }
+	}
+	.sub-title-desc { margin:10px 0 0; font-size:$fSize-r; color:$fColor-2; }
+}
+
+
+//Class Style
+.point {color:$baseColor; }
+.point2 { color:$baseColor2; }
+.point3 { color:#ff4200; }
+
+//more Type
+.more-btn {
+	a { display:block; width:20px; height:20px; line-height:18px; font-size:20px; color:#bbb !important; text-align:center; font-weight:bold; border:1px solid $borderColor-2 !important; @include boxSizing;
+		&:hover { color:$fColor-1 !important; border-color:$borderColor-4 !important; }
+	}
+}
+
+
+//sns btn
+.na-btn { float:left; display:inline; border:1px solid $naver-color; @include btnStyle(100px, 30px, $naver-color, transparent);
+	strong { padding-left:20px; background:url($n-icon) no-repeat left center; font-size:$fSize-ba; }
+	&:hover { background-color:$naver-color !important; color:#fff !important;
+		strong { background-image:url($n-icon-hover) !important; }
+	}
+}
+.fb-btn { float:left; display:inline; margin:0 0 0 8px; border:1px solid $facebook-color; @include btnStyle(100px, 30px, $facebook-color, transparent);
+	strong { padding-left:15px; background:url($f-icon) no-repeat left center; font-size:$fSize-ba; }
+	&:hover { background-color:$facebook-color !important; color:#fff !important;
+		strong { background-image:url($f-icon-hover) !important; }
+	}
+}
+
+//list Type
+.list-type-1 { display:table; zoom:1; width:100%;
+	li { float:left; display:inline; width:100%; @include boxSizing; }
+}
+.list-type-2 { display:table; zoom:1; width:100%;
+	li { float:left; display:inline; width:50%; @include boxSizing; }
+}
+.list-type-3 { display:table; zoom:1;
+	li { float:left; display:inline; width:33.33%; @include boxSizing; }
+}
+
+//img hover scale Action
+.hover-img img { @include scaleZoom(1, 1); @include hoverZoom(0.2s); }
+.hover-img:hover img { @include scaleZoom(1.1, 1.1); }
+
+
+//textarea Types
+.textarea-type-1 { display:block; width:100%; height:150px; background-color:$bgColor-1; }
+
+//input Types
+$inputHeight:40px;
+$inputHeight2:30px;
+.input-type-1 { width:100%; height:$inputHeight !important; line-height:$inputHeight !important; border:1px solid $borderColor-5 !important; background-color:$bgColor-1; }
+.input-type-2 { float:left; width:200px; height:$inputHeight !important; line-height:$inputHeight !important; border:1px solid $borderColor-5 !important; background-color:$bgColor-1; }
+.input-type-3 { float:left; width:235px; height:$inputHeight2 !important; line-height:$inputHeight !important; border:0 !important; background:none; text-align:right !important; }
+.input-type-4 { float:left; width:470px; height:$inputHeight2 !important; line-height:$inputHeight !important; border:1px solid $borderColor-1 !important; background:none; text-align:center !important; }
+
+.btn-check-box-2,
+.btn-check-box { float:right; overflow:hidden; width:80px; height:40px;
+	.btn-check-type { position:relative; float:left; width:40px; margin:0 !important; background-color:$bgColor-1; @include boxSizing;
+		label {
+			display: block;
+			cursor:pointer;
+			width:40px;
+			height:40px;
+			line-height:38px;
+			text-align:center;
+			color: $fColor-2;
+			border:1px solid $borderColor-5;
+		}
+		input[type="checkbox"],input[type="radio"] {
+			opacity: 0;
+			filter: alpha(opacity=0);
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			top: 0;
+			left: 0;
+			border: 0;
+		}
+		input[type="checkbox"]:checked + label,input[type="radio"]:checked + label {
+			background:#555; border:1px solid #555; color:#fff; height:39.9px;
+			font-weight:bold;
+		}
+	}
+}
+
+.btn-check-box-2 { width:100%;
+	.btn-check-type { width:115px;
+		label { width:100%; }
+		&:first-child { margin:0 10px 0 0 !important;}
+	}
+}
+
+.custom-checkbox { float:left; position:relative;
+	$boxSize:20px;
+	$onSize:-18px;
+	label {
+		display: inline-block;
+		vertical-align: middle;
+		color: #5b5445;
+		&:before {
+			content: '';
+			display: inline-block;
+			width: $boxSize;
+			height: $boxSize;
+			margin-right: 9px;
+			background: url($i-checkbox) 0 0 no-repeat #f2f4f7;
+			background-size: 18px;
+			border:1px solid $borderColor-5;
+			vertical-align: middle;
+			@include boxSizing;
+		}
+	}
+	input[type="checkbox"] {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		top: 0;
+		left: 0;
+		border: 0;
+	}
+	input[type="checkbox"]:checked + label {
+		&:before {
+			background-position: 0 $onSize;
+		}
+	}
+}
+.custom-radio { float:left; position:relative;
+	$boxSize:20px;
+	$onSize:-20px;
+	label {
+		display: inline-block;
+		vertical-align: middle;
+		color: #5b5445;
+		&:before {
+			content: '';
+			display: inline-block;
+			width: $boxSize;
+			height: $boxSize;
+			margin-right: 9px;
+			background: url($i-radio) 0 0 no-repeat;
+			background-size: $boxSize;
+			vertical-align: middle;
+			@include boxSizing;
+		}
+	}
+	input[type="radio"] {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		top: 0;
+		left: 0;
+		border: 0;
+	}
+	input[type="radio"]:checked + label {
+		&:before {
+			background-position: 0 $onSize;
+		}
+	}
+}
+
+//custom Select
+.select-4 select,
+.select-1 select { background-image:url($i-select-1); background-size:39px 38px; background-color:#f2f4f7; }
+.customSelect {display:inline-block; *display:inline; *zoom:1; vertical-align:middle; text-align:left; position: relative; left:0;top:0; width:100%; height:40px; background-repeat:no-repeat; background-position:right center; @include boxSizing;
+	&.select-1 { background-image:url($i-select-1); background-size:39px 38px; background-color:#f2f4f7; border:1px solid $borderColor-5; }
+	&.select-2 { float:left; width:70px; height:24px; background-image:url($i-select-2); background-size:15px 8px; color:$fColor-2;border:1px solid $borderColor-7; background-color:#fff;
+		.txt { line-height:24px; }
+	}
+	&.select-3 { float:left; width:200px; height:30px; background-image:url($i-select-2); background-size:15px 8px; color:$fColor-2; border:1px solid $borderColor-1; background-color:#fff;
+		.txt { line-height:30px; }
+	}
+	&.select-4 { float:left; width:100%; height:40px; color:$fColor-2; background-image:url($i-select-2); border:1px solid #ddd; background-size:15px 8px; background-color:#f2f4f7;
+		.txt { line-height:40px; }
+		select { height:38px; }
+	}
+
+	.txt {position: absolute;left: 0;top: 0;width: 100%;height: 100%; line-height:40px; text-indent: 10px; }
+	select {position: absolute; left:0; top: 0; width:100%; cursor: pointer; opacity:1; border:0; filter:alpha(opacity=1);}
+}
+
+
+//list Type
+.table-type-1 {
+	thead { background-color:#555; color:#fff; line-height:45px;
+		th { text-align:center; font-weight:bold; }
+	}
+	tbody {
+		tr { padding:10px 0; height:45px; border-bottom:1px solid $borderColor-1; text-align:center;
+			.custom-checkbox { float:none !important; margin:0 auto; }
+			.custom-checkbox label { overflow:hidden; width:20px; }
+			.select-text { line-height:24px; }
+			.align-left { text-align:left; }
+			.detail-hover-box { position:relative;
+				&:hover {
+					a { color:$baseColor2; }
+					.layer-text2 { display:block; }
+				}
+			}
+		}
+	}
+	.default-list-tbody { background-color:#fff9d8;
+	}
+	.basic-list-tbody {
+		tr {}
+	}
+}
+.table-type-2 {
+	thead { border-top:2px solid $borderColor-4; border-bottom:1px solid $borderColor-7; line-height:45px;
+		th { text-align:center; font-weight:bold; }
+	}
+	tbody {
+		tr { border-bottom:1px solid $borderColor-1; text-align:center;
+			td { padding:10px 0; line-height:24px; }
+		}
+	}
+	.default-list-tbody { background-color:#fff9d8;
+	}
+	.basic-list-tbody {
+		tr {}
+	}
+}
+//문의 게시판 스타일링
+.subject-icon { display:inline-block; *display:inline; *zoom:1; width:24px; height:24px; line-height:24px; text-align:center; border-radius:12px; color:#fff; }
+.q-icon { background-color:#555; }
+.a-icon { background-color:#ff7e00; }
+.qa-table-widget {
+	.writer {
+		span { display:block; }
+	}
+	.qa-writer { margin:10px 0 0 0;
+		span { display:inline-block; padding:4px 5px; background-color:#999; color:#fff; border-radius:2px; }
+	}
+	.subject { padding:10px 0 10px 50px; line-height:24px;
+		.subject-link { display:block; color:$fColor-1;
+			&:hover { color:$baseColor2; }
+		}
+		.subject-text { margin:0 0 0 10px; }
+	}
+	.a-subject { margin:10px 0 0 0;
+		.subject-text { color:$fColor-2; }
+	}
+	.a-date { margin:10px 0 0 0; }
+}
+
+
+//paging
+.paging-widget { margin:20px 0 0; text-align:center;
+	.prev-paging,
+	.next-paging { display:inline-block; *display:inline; *zoom:1; vertical-align:middle;
+		a { display:block; width:30px; height:30px; line-height:30px;
+			img { display:block; margin:0 auto; padding:8px 0; }
+		}
+	}
+	.paging-ul { display:inline-block; *display:inline; *zoom:1; vertical-align:middle;
+		li { display:inline-block; *display:inline; *zoom:1;
+			a { display:block; width:30px; height:30px; line-height:30px; text-align:center;
+				&:hover { color:$baseColor; }
+				&.active { font-weight:bold; color:#fff; background-color:#999; border-radius:3px; }
+			}
+		}
+	}
+}
+
+//자주 묻는 질문
+.faq-mini-widget { margin:60px 0 0 0;
+	.widget-title { background-color:#3e95e5; padding:10px 20px;
+		h3 { display:table; width:100%;
+			.icon { float:left; margin:0 15px 0 0;
+				img { display:block; margin:0 auto; }
+			}
+			strong { float:left; font-size:$fSize-m; color:#fff; line-height:30px; }
+		}
+	}
+	.faq-board-box { display:table; width:100%; padding:10px 0; border:1px solid $borderColor-2; border-top:0;
+		.board-box-left { float:left; border-right:1px dashed $borderColor-2; }
+		.board-box-right { float:right; }
+		.board-widget { padding:15px 0; width:50%; height:170px;
+			.board-title { float:left; width:200px; padding:50px 0 0 0; text-align:center;
+				h4 { font-size:$fSize-m; }
+				.more-btn { margin:10px 0 0;
+					a { margin:0 auto;}
+				}
+			}
+			.board-list { float:left;
+				li { margin:14px 0 0 0;
+					&:first-child { margin:0; }
+					a { overflow:hidden; display:block; }
+					.number { float:left; display:inline; margin:0 5px 0 0; width:16px; height:16px; text-align:center; font-weight:bold; color:#fff; line-height:18px; background-color:#999; border-radius:2px; @include transition(0.2s); }
+					.string { float:left; display:inline; }
+					.text { float:left; width:265px; @include textOverflow; color:#2d363d; @include transition(0.2s);
+					}
+					&:hover .text { color:$baseColor2; text-decoration:underline; }
+				}
+			}
+		}
+	}
+}
+
+
+//리스트 카테고리 영역
+.visual-cate-wrap { position:relative;
+	ul { display:table; width:100%;
+		li { float:left; width:100px; margin-right:50px;
+			a { display:block;
+				.cate-icon { width:100px; height:100px; background-repeat:no-repeat; background-position:left top;
+					@for $i from 1 through 6 {
+						&.icon#{$i} { background-image:url('../image/goodtip/tip_cate_icon#{$i}.png'); }
+					}
+					@for $i from 1 through 4 {
+						&.list-icon#{$i} { background-image:url('../image/list/list_cate_icon#{$i}.png'); }
+					}
+				}
+				&.active,
+				&:hover { color:$baseColor2;
+					@for $i from 1 through 6 {
+						.icon#{$i} { background-image:url('../image/goodtip/tip_cate_icon#{$i}_on.png'); }
+					}
+					@for $i from 1 through 4 {
+						.list-icon#{$i} { background-image:url('../image/list/list_cate_icon#{$i}_on.png'); }
+					}
+				}
+				.cate-text { margin:10px 0 0 0; text-align:center; font-size:$fSize-r; }
+			}
+		}
+	}
+	.bx-controls-direction {
+		a { position:absolute; display:block; width:30px; height:30px; margin:-15px 0 0 0; text-indent:-9999px; background-position:center center; background-repeat:no-repeat; border:1px solid $borderColor-1; }
+		.bx-prev { left:0; top:50px; background-image:url('../image/goodtip/tip_cate_prev.png');
+			&:hover { background-image:url('../image/goodtip/tip_cate_prev_on.png'); }
+		}
+		.bx-next { right:0; top:50px; background-image:url('../image/goodtip/tip_cate_next.png');
+			&:hover { background-image:url('../image/goodtip/tip_cate_next_on.png'); }
+		}
+	}
+}
